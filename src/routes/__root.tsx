@@ -4,7 +4,6 @@ import React from 'react';
 import { Fragment } from 'react/jsx-runtime';
 import { QueryProvider } from '@/client/providers/query-provider';
 import { TanStackRouterDevtools } from '@/client/providers/router-devtools';
-import { ThemeProvider } from '@/client/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 
 interface MyRouterContext {
@@ -23,12 +22,10 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 function RootRouteComponent() {
   return (
     <Fragment>
-      <ThemeProvider defaultTheme='light'>
-        <QueryProvider>
-          <Outlet />
-          <Toaster />
-        </QueryProvider>
-      </ThemeProvider>
+      <QueryProvider>
+        <Outlet />
+        <Toaster />
+      </QueryProvider>
       <React.Suspense>
         <TanStackRouterDevtools />
       </React.Suspense>
