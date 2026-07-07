@@ -1,14 +1,10 @@
 import type { QueryClient } from '@tanstack/react-query';
 import { createRootRouteWithContext, Outlet } from '@tanstack/react-router';
 import { Fragment } from 'react/jsx-runtime';
+import { BaseHeader } from '@/features/header/components/base-header';
 
 interface MyRouterContext {
   queryClient: QueryClient;
-}
-
-if (import.meta.env.MODE === 'development') {
-  const { scanReactApp } = await import('@/features/shared/utils/react-scan');
-  scanReactApp();
 }
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
@@ -18,7 +14,10 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 function RootRouteComponent() {
   return (
     <Fragment>
-      <Outlet />
+      <div className='text-sm'>
+        <BaseHeader />
+        <Outlet />
+      </div>
     </Fragment>
   );
 }

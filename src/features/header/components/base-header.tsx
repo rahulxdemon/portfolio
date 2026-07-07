@@ -26,7 +26,15 @@ function NavLink({ link }: { link: INavLink }) {
   });
 
   return (
-    <Link ref={ref} key={link.id} {...link.linkOptions} onMouseOver={replay} onFocus={replay}>
+    <Link
+      ref={ref}
+      key={link.id}
+      className='font-medium focus:outline-none'
+      {...link.linkOptions}
+      onMouseOver={replay}
+      onFocus={replay}
+      activeProps={{ className: 'text-background bg-text' }}
+    >
       {link.label}
     </Link>
   );
