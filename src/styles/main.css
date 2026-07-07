@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --font-fira-mono: "Fira Mono", monospace;
 
@@ -34,51 +32,8 @@
     --theme-line-height-base: 1.25;
     --font-size: 14px;
 
-    --tint: #8000ff;
-
-    --theme-background: oklch(from var(--tint) 0.99 calc(c * 0.1) h);
-    --theme-background-modal: oklch(from var(--tint) 0.94 calc(c * 0.12) h);
-    --theme-background-modal-footer: oklch(from var(--tint) 0.9 calc(c * 0.2) h);
-    --theme-background-input: oklch(from var(--tint) 0.97 calc(c * 0.08) h);
-    --theme-border: oklch(from var(--tint) 0.9 calc(c * 0.2) h);
-    --theme-border-subdued: oklch(from var(--tint) 0.92 calc(c * 0.15) h);
-    --theme-text: oklch(from var(--tint) 0.2 calc(c * 0.3) h);
-    --theme-button: oklch(from var(--tint) 0.2 calc(c * 0.3) h);
-    --theme-button-text: oklch(from var(--tint) 0.99 calc(c * 0.1) h);
-    --theme-button-foreground: oklch(from var(--tint) 0.92 calc(c * 0.15) h);
-    --theme-button-background: oklch(from var(--tint) 0.9 calc(c * 0.2) h);
-    --theme-focused-foreground: oklch(from var(--tint) 0.65 c h);
-    --theme-focused-foreground-subdued: oklch(from var(--tint) 0.65 c h / 0.5);
-  }
-
-  .dark,
-  :root[class~="dark"] {
-    /*--theme-background: oklch(from var(--tint) 0.15 calc(c * 0.2) h);
-    --theme-background-modal: oklch(from var(--tint) 0.3 calc(c * 0.2) h);
-    --theme-background-modal-footer: oklch(from var(--tint) 0.25 calc(c * 0.22) h);
-    --theme-background-input: oklch(from var(--tint) 0.35 calc(c * 0.18) h);
-    --theme-border: oklch(from var(--tint) 0.45 calc(c * 0.25) h);
-    --theme-border-subdued: oklch(from var(--tint) 0.45 calc(c * 0.25) h / 0.6);
-    --theme-text: oklch(from var(--tint) 0.88 calc(c * 0.2) h);
-    --theme-button: oklch(from var(--tint) 0.88 calc(c * 0.2) h);
-    --theme-button-text: oklch(from var(--tint) 0.15 calc(c * 0.2) h);
-    --theme-button-foreground: oklch(from var(--tint) 0.35 calc(c * 0.25) h);
-    --theme-button-background: oklch(from var(--tint) 0.24 calc(c * 0.2) h);
-    --theme-focused-foreground: oklch(from var(--tint) 0.7 c h);
-    --theme-focused-foreground-subdued: oklch(from var(--tint) 0.7 c h / 0.5);*/
-
-    --theme-background: #ffffe1;
-    --theme-border: oklch(from var(--tint) 0.45 calc(c * 0.25) h);
-    --theme-border-subdued: oklch(from var(--tint) 0.45 calc(c * 0.25) h / 0.6);
-    --theme-text: #000000;
-    --theme-button: oklch(from var(--tint) 0.88 calc(c * 0.2) h);
-    --theme-button-text: #ffb000;
-    --theme-button-foreground: oklch(from var(--tint) 0.35 calc(c * 0.25) h);
-    --theme-button-background: oklch(from var(--tint) 0.24 calc(c * 0.2) h);
-    --theme-focused-foreground: oklch(from var(--tint) 0.7 c h);
-    --theme-focused-foreground-subdued: oklch(from var(--tint) 0.7 c h / 0.5);
-
-    color-scheme: dark;
+    --theme-background: #e8ff6c;
+    --theme-text: #000;
   }
 }
 
@@ -105,9 +60,5 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
-  }
-
-  .span-link {
-    box-shadow: inset 0 0 0 2px var(--theme-button-foreground);
   }
 }

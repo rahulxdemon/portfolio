@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as QuotesIndexRouteImport } from './routes/quotes/index'
+import { Route as CvIndexRouteImport } from './routes/cv/index'
+import { Route as BlogsIndexRouteImport } from './routes/blogs/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuotesIndexRoute = QuotesIndexRouteImport.update({
+  id: '/quotes/',
+  path: '/quotes/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CvIndexRoute = CvIndexRouteImport.update({
+  id: '/cv/',
+  path: '/cv/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogsIndexRoute = BlogsIndexRouteImport.update({
+  id: '/blogs/',
+  path: '/blogs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blogs/': typeof BlogsIndexRoute
+  '/cv/': typeof CvIndexRoute
+  '/quotes/': typeof QuotesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blogs': typeof BlogsIndexRoute
+  '/cv': typeof CvIndexRoute
+  '/quotes': typeof QuotesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blogs/': typeof BlogsIndexRoute
+  '/cv/': typeof CvIndexRoute
+  '/quotes/': typeof QuotesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/blogs/' | '/cv/' | '/quotes/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/blogs' | '/cv' | '/quotes'
+  id: '__root__' | '/' | '/blogs/' | '/cv/' | '/quotes/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogsIndexRoute: typeof BlogsIndexRoute
+  CvIndexRoute: typeof CvIndexRoute
+  QuotesIndexRoute: typeof QuotesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quotes/': {
+      id: '/quotes/'
+      path: '/quotes'
+      fullPath: '/quotes/'
+      preLoaderRoute: typeof QuotesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cv/': {
+      id: '/cv/'
+      path: '/cv'
+      fullPath: '/cv/'
+      preLoaderRoute: typeof CvIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blogs/': {
+      id: '/blogs/'
+      path: '/blogs'
+      fullPath: '/blogs/'
+      preLoaderRoute: typeof BlogsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogsIndexRoute: BlogsIndexRoute,
+  CvIndexRoute: CvIndexRoute,
+  QuotesIndexRoute: QuotesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
