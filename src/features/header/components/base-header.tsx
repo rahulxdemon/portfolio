@@ -29,7 +29,7 @@ function NavLink({ link }: { link: INavLink }) {
     <Link
       ref={ref}
       key={link.id}
-      className='font-medium focus:outline-none'
+      className='focus:outline-text focus:outline-1'
       {...link.linkOptions}
       onMouseOver={replay}
       onFocus={replay}
