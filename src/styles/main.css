@@ -4,20 +4,10 @@
 
 @theme inline {
   --font-fira-mono: "Fira Mono", monospace;
+  --font-serif: "Libre Caslon Text", serif;
 
   --color-background: var(--theme-background);
-  --color-background-modal: var(--theme-background-modal);
-  --color-background-modal-footer: var(--theme-background-modal-footer);
-  --color-background-input: var(--theme-background-input);
-  --color-border: var(--theme-border);
-  --color-border-subdued: var(--theme-border-subdued);
   --color-text: var(--theme-text);
-  --color-button: var(--theme-button);
-  --color-button-text: var(--theme-button-text);
-  --color-button-foreground: var(--theme-button-foreground);
-  --color-button-background: var(--theme-button-background);
-  --color-focused-foreground: var(--theme-focused-foreground);
-  --color-focused-foreground-subdued: var(--theme-focused-foreground-subdued);
 
   --spacing-mono: calc(var(--font-size) * var(--theme-line-height-base));
 
