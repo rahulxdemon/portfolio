@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import { useScramble } from 'use-scramble';
+import { SCRAMBLE_CONFIG } from '@/features/shared/data/scramble-config';
 import { type INavLink, NAV_LINKS } from './data';
 
 export function BaseHeader() {
@@ -16,14 +17,7 @@ export function BaseHeader() {
 
 function NavLink({ link }: { link: INavLink }) {
   // hook returns a ref
-  const { ref, replay } = useScramble({
-    text: link.label,
-    speed: 0.6, // Explicitly set the base speed (default is 1)
-    tick: 1, // Reduce this so it advances quickly along the string
-    step: 1, // Ensures it introduces 1 new character position per redraw
-    scramble: 10, // Increase this so characters shuffle longer before resolving
-    overdrive: false,
-  });
+  const { ref, replay } = useScramble(SCRAMBLE_CONFIG(link.label));
 
   return (
     <Link

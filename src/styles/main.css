@@ -4,7 +4,7 @@
 
 @theme inline {
   --font-fira-mono: "Fira Mono", monospace;
-  --font-serif: "Libre Caslon Text", serif;
+  --font-serif: "EB Garamond", serif;
 
   --color-background: var(--theme-background);
   --color-text: var(--theme-text);
