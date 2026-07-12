@@ -3,7 +3,7 @@ import { type INavLink, NAV_LINKS } from './data';
 
 export function BaseHeader() {
   return (
-    <header className='px-[2ch] py-mono'>
+    <header className='px-[2ch] pt-mono pb-12'>
       <nav className='flex items-center justify-start gap-4 font-baskerville'>
         {NAV_LINKS.map((link) => (
           <NavLink key={link.id} link={link} />
