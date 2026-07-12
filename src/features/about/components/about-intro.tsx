@@ -5,27 +5,25 @@ export function AboutIntro() {
   return (
     <div>
       <Name />
-      <Location />
+      {/*<Location />*/}
     </div>
   );
 }
 
 function Name() {
-  const { ref, replay } = useScramble(SCRAMBLE_CONFIG('Rahul Palamarthi'));
-
   return (
-    <div className='pb-mono text-lg'>
-      <p ref={ref} onMouseOver={replay} onFocus={replay} />
+    <div className='text-lg font-semibold'>
+      <p>Rahul Palamarthi</p>
     </div>
   );
 }
 
-function Location() {
+export function Location() {
   const { ref, replay } = useScramble(SCRAMBLE_CONFIG('Based in: Hyderabad, India'));
 
   return (
     <div className='text-text/60'>
-      <p ref={ref} onMouseOver={replay} onFocus={replay} />
+      <p ref={ref} className='inline' onMouseOver={replay} onFocus={replay} />
     </div>
   );
 }

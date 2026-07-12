@@ -7,10 +7,10 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className='px-[2ch]'>
-      <div className='py-mono space-y-mono'>
+    <div className='px-[2ch] max-w-md'>
+      <div className='py-mono space-y-mono animate-fade-in-up [animation-delay:200ms] opacity-0'>
         <AboutIntro />
-        <div className='font-serif text-base font-medium'>
+        <div className=''>
           <p>Hey, I'm Rahul</p>
         </div>
       </div>

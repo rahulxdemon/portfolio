@@ -9,30 +9,30 @@ export interface INavLink {
 export const NAV_LINKS: INavLink[] = [
   {
     id: 'about',
-    label: '[about]',
+    label: 'about',
     linkOptions: linkOptions({
       to: '/',
     }),
   },
   {
     id: 'cv',
-    label: '[cv]',
+    label: 'cv',
     linkOptions: linkOptions({
       to: '/cv',
     }),
   },
   {
-    id: 'blogs',
-    label: '[blogs]',
+    id: 'projects',
+    label: 'projects',
     linkOptions: linkOptions({
-      to: '/blogs',
+      to: '/projects',
     }),
   },
-  {
-    id: 'quotes',
-    label: '[quotes]',
-    linkOptions: linkOptions({
-      to: '/quotes',
-    }),
-  },
+  // {
+  //   id: 'quotes',
+  //   label: '[quotes]',
+  //   linkOptions: linkOptions({
+  //     to: '/quotes',
+  //   }),
+  // },
 ];

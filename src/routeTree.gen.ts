@@ -10,18 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as QuotesIndexRouteImport } from './routes/quotes/index'
+import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as CvIndexRouteImport } from './routes/cv/index'
-import { Route as BlogsIndexRouteImport } from './routes/blogs/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const QuotesIndexRoute = QuotesIndexRouteImport.update({
-  id: '/quotes/',
-  path: '/quotes/',
+const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
+  id: '/projects/',
+  path: '/projects/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CvIndexRoute = CvIndexRouteImport.update({
@@ -29,44 +28,35 @@ const CvIndexRoute = CvIndexRouteImport.update({
   path: '/cv/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogsIndexRoute = BlogsIndexRouteImport.update({
-  id: '/blogs/',
-  path: '/blogs/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/blogs/': typeof BlogsIndexRoute
   '/cv/': typeof CvIndexRoute
-  '/quotes/': typeof QuotesIndexRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blogs': typeof BlogsIndexRoute
   '/cv': typeof CvIndexRoute
-  '/quotes': typeof QuotesIndexRoute
+  '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/blogs/': typeof BlogsIndexRoute
   '/cv/': typeof CvIndexRoute
-  '/quotes/': typeof QuotesIndexRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/blogs/' | '/cv/' | '/quotes/'
+  fullPaths: '/' | '/cv/' | '/projects/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/blogs' | '/cv' | '/quotes'
-  id: '__root__' | '/' | '/blogs/' | '/cv/' | '/quotes/'
+  to: '/' | '/cv' | '/projects'
+  id: '__root__' | '/' | '/cv/' | '/projects/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BlogsIndexRoute: typeof BlogsIndexRoute
   CvIndexRoute: typeof CvIndexRoute
-  QuotesIndexRoute: typeof QuotesIndexRoute
+  ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -78,11 +68,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/quotes/': {
-      id: '/quotes/'
-      path: '/quotes'
-      fullPath: '/quotes/'
-      preLoaderRoute: typeof QuotesIndexRouteImport
+    '/projects/': {
+      id: '/projects/'
+      path: '/projects'
+      fullPath: '/projects/'
+      preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cv/': {
@@ -92,21 +82,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CvIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blogs/': {
-      id: '/blogs/'
-      path: '/blogs'
-      fullPath: '/blogs/'
-      preLoaderRoute: typeof BlogsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BlogsIndexRoute: BlogsIndexRoute,
   CvIndexRoute: CvIndexRoute,
-  QuotesIndexRoute: QuotesIndexRoute,
+  ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
