@@ -28,11 +28,11 @@ export const NAV_LINKS: INavLink[] = [
       to: '/projects',
     }),
   },
-  // {
-  //   id: 'quotes',
-  //   label: '[quotes]',
-  //   linkOptions: linkOptions({
-  //     to: '/quotes',
-  //   }),
-  // },
+  {
+    id: 'log',
+    label: 'log',
+    linkOptions: linkOptions({
+      to: '/log',
+    }),
+  },
 ];

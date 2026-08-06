@@ -36,8 +36,11 @@
     --theme-line-height-base: 1.25;
     --font-size: 14px;
 
-    --theme-background: #fff;
-    --theme-text: #000;
+    /*--theme-background: #fff;
+    --theme-text: #000;*/
+
+    --theme-background: #0625ee;
+    --theme-text: #fff;
 
     /*--theme-background: #0100fe;
     --theme-text: #fff;*/
@@ -66,12 +69,12 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 5px;
+    background: var(--color-gray-300);
+    border-radius: 0px;
   }
   * {
     scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
+    scrollbar-color: var(--color-gray-300) transparent;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {

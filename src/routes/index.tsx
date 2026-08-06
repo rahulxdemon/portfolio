@@ -7,8 +7,8 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className='px-[2ch] max-w-md'>
-      <div className='pt-4 pb-12 space-y-mono animate-fade-in-up [animation-delay:200ms] opacity-0 text-neutral-800'>
+    <div className='px-[2ch] max-w-md leading-6'>
+      <div className='pt-4 pb-16 animate-fade-in-up [animation-delay:200ms] opacity-0'>
         <AboutIntro />
         <div>
           <p>Hey, I'm Rahul</p>
