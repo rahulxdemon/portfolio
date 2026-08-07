@@ -16,7 +16,7 @@ export const NAV_LINKS: INavLink[] = [
   },
   {
     id: 'cv',
-    label: 'cv',
+    label: 'Work',
     linkOptions: linkOptions({
       to: '/cv',
     }),
