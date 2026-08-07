@@ -22,6 +22,7 @@ function NavLink({ link, index }: { link: INavLink; index: number }) {
     step: 1, // Ensures it introduces 1 new character position per redraw
     scramble: 10, // Increase this so characters shuffle longer before resolving
     overdrive: false,
+    range: [33, 57],
   });
 
   // hook returns a ref
@@ -42,7 +43,7 @@ function NavLink({ link, index }: { link: INavLink; index: number }) {
   return (
     <Link
       key={link.id}
-      className='focus-visible:outline-text/65 w-full group focus-visible:outline-1 uppercase transition-colors duration-300 p-[0.35ch]'
+      className='focus-visible:outline-text/65 w-full bg-red-400/50 group focus-visible:outline-1 outline-offset-0 uppercase transition-colors duration-300 p-[0.35ch]'
       {...link.linkOptions}
       activeProps={{ className: 'text-text' }}
       inactiveProps={{ className: 'text-text/65 hover:text-text/90' }}
@@ -55,7 +56,6 @@ function NavLink({ link, index }: { link: INavLink; index: number }) {
         className='group-hover:bg-secondary-background group-hover:text-secondary-text group-focus-visible:bg-secondary-background group-focus-visible:text-secondary-text'
       />{' '}
       <span ref={ref} />
-      {/*{link.label}*/}
     </Link>
   );
 }
