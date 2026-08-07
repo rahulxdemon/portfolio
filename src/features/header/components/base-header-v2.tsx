@@ -17,7 +17,7 @@ function NavLink({ link, index }: { link: INavLink; index: number }) {
   return (
     <Link
       key={link.id}
-      className='focus-visible:outline-text w-full focus-visible:outline-1 uppercase transition-colors duration-300 py-[0.5ch]'
+      className='focus-visible:outline-text/60 w-full focus-visible:outline-1 uppercase transition-colors duration-300 py-[0.35ch]'
       {...link.linkOptions}
       activeProps={{ className: 'text-text' }}
       inactiveProps={{ className: 'text-text/70 hover:text-text/90' }}
