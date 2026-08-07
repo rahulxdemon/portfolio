@@ -10,6 +10,9 @@
   --color-background: var(--theme-background);
   --color-text: var(--theme-text);
 
+  --color-secondary-background: var(--theme-secondary-background);
+  --color-secondary-text: var(--theme-secondary-text);
+
   --spacing-mono: calc(var(--font-size) * var(--theme-line-height-base));
 
   --radius-lg: var(--radius);
@@ -44,6 +47,9 @@
 
     --theme-background: #0625ee;
     --theme-text: #fff;
+
+    --theme-secondary-background: #f6f1de;
+    --theme-secondary-text: #241f21;
 
     /*--theme-background: #0100fe;
     --theme-text: #fff;*/
