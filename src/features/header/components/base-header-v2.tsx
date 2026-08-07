@@ -5,7 +5,7 @@ import { type INavLink, NAV_LINKS } from './data';
 export function BaseHeaderV2() {
   return (
     <header className='fixed top-0 right-0 px-[2ch] py-[2ch]'>
-      <nav className='flex items-start justify-start gap-0 flex-col w-26.75 font-chivo font-medium'>
+      <nav className='flex items-start justify-start gap-0 flex-col w-27.5 font-chivo font-medium'>
         {NAV_LINKS.map((link, index) => (
           <NavLink key={link.id} link={link} index={index} />
         ))}
@@ -43,12 +43,13 @@ function NavLink({ link, index }: { link: INavLink; index: number }) {
   return (
     <Link
       key={link.id}
-      className='focus-visible:outline-text/65 w-full bg-red-400/50 group focus-visible:outline-1 outline-offset-0 uppercase transition-colors duration-300 p-[0.35ch]'
+      className='focus-visible:outline-text/65 w-full h-6.5 group focus-visible:outline-1 outline-offset-0 uppercase transition-colors duration-300 px-[0.5ch] py-1'
       {...link.linkOptions}
       activeProps={{ className: 'text-text' }}
       inactiveProps={{ className: 'text-text/65 hover:text-text/90' }}
       activeOptions={{ exact: true }}
-      onMouseOver={handleReplay}
+      onMouseEnter={handleReplay}
+      onMouseLeave={handleReplay}
       onFocus={handleReplay}
     >
       <span
