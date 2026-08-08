@@ -20,8 +20,8 @@ function Index() {
                   <span className='font-semibold italic'>design engineer</span> focused on the product itself and the craft of painting every pixel.
                 </p>
                 <p className='text-text/80'>
-                  I'm driven, sharp, and deeply focused on startups. I've worked as a founding engineer, putting early-stage products at the center of
-                  everything I do.
+                  I’m driven, sharp, and deeply focused on startups. As a founding engineer, I’ve put early-stage products at the center of everything
+                  I do.
                 </p>
                 <p className='text-text/80'>Liked what you found? I’m on X, GitHub, and LinkedIn.</p>
               </div>
