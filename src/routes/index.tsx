@@ -18,8 +18,8 @@ function Index() {
               <div className='space-y-4 font-medium leading-6.5'>
                 <p className='text-text/80'>
                   I'm a software developer at Nxtagent. From the start, I've approached the role more like a{' '}
-                  <span className='font-baskerville font-medium italic text-text'>design engineer</span> focused on the product itself and the craft
-                  of painting every pixel.
+                  <span className='font-baskerville font-medium italic text-text bg-background-helper'>design engineer</span> focused on the product
+                  itself and the craft of painting every pixel.
                 </p>
                 <p className='text-text/80'>
                   I’m driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I’ve put early-stage products at the center of
@@ -41,7 +41,7 @@ function EngineerSc() {
     speed: 0.6, // Explicitly set the base speed (default is 1)
     tick: 1, // Reduce this so it advances quickly along the string
     step: 1, // Ensures it introduces 1 new character position per redraw
-    scramble: 10, // Increase this so characters shuffle longer before resolving
+    scramble: 20, // Increase this so characters shuffle longer before resolving
     overdrive: false,
   });
 
