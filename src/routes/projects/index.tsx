@@ -1,4 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { PageContainer } from '@/features/shared/components/page-container';
+import { PageIntro } from '@/features/shared/components/page-intro';
 
 export const Route = createFileRoute('/projects/')({
   component: RouteComponent,
@@ -6,12 +8,14 @@ export const Route = createFileRoute('/projects/')({
 
 function RouteComponent() {
   return (
-    <div className='px-[2ch] max-w-160 mx-auto text-neutral-700'>
-      <div className='pt-4 pb-12 space-y-12 animate-fade-in-up [animation-delay:200ms] opacity-0'>
-        <div className='text-lg font-semibold'>
-          <h1>Projects</h1>
+    <PageContainer>
+      <div className='space-y-8'>
+        <PageIntro content='Projects' />
+
+        <div>
+          <p>content comes here</p>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 }
