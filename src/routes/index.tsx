@@ -22,7 +22,7 @@ function Index() {
                   itself and the craft of painting every pixel.
                 </p>
                 <p className='text-text/80'>
-                  I’m driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I’ve put early-stage products at the center of
+                  I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of
                   everything I do.
                 </p>
                 <p className='text-text/80'>Liked what you found? I’m on X, GitHub, and LinkedIn.</p>
