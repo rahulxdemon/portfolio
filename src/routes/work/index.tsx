@@ -15,9 +15,9 @@ function RouteComponent() {
 
         <div className='space-y-8'>
           {WORK_EXPERIENCE.map((work, i) => (
-            <div key={i} className='border-b last:border-b-none border-b-text/20 pb-4'>
+            <div key={i} className='border-b last:border-none border-b-text/20 pb-4'>
               <h2 className='font text-base font-medium pb-1'>{work.company}</h2>
-              <div className='flex items-center justify-between gap-4 text-xs text-text/85'>
+              <div className='flex items-center justify-between gap-4 text-xs text-text/80'>
                 <div>
                   {work.role.map((role, i) => (
                     <span key={i} className='font-medium'>
@@ -25,7 +25,7 @@ function RouteComponent() {
                     </span>
                   ))}
                 </div>
-                <div className='text-[10px]'>{work.date}</div>
+                <div className='text-[10px] font-medium'>{work.date}</div>
               </div>
             </div>
           ))}
