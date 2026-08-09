@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useScramble } from 'use-scramble';
+import { PageContainer } from '@/features/shared/components/page-container';
 import { PageIntro } from '@/features/shared/components/page-intro';
 import { GITHUB_SOCIAL, LINKEDIN_SOCIAL, TWITTER_SOCIAL } from '@/features/social/data';
 
@@ -9,41 +10,37 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   return (
-    <div className='max-w-158 mx-6 sm:mx-27.5'>
-      <div className='py-20'>
-        <div className='animate-fade-in-up [animation-delay:200ms] opacity-0'>
-          <div className='space-y-8'>
-            <PageIntro content='Rahul Palamarthi' />
-            <div className='space-y-4 font-medium leading-6.5'>
-              <p className='text-text/80'>
-                I'm a software developer at Nxtagent. From the start, I've approached the role more like a{' '}
-                <span className='font-baskerville font-medium italic text-text bg-background-helper'>design engineer</span> focused on the product
-                itself and the craft of painting every pixel.
-              </p>
-              <p className='text-text/80'>
-                I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of
-                everything I do.
-              </p>
-              <p className='text-text/80'>
-                Liked what you found? I'm on{' '}
-                <a className='social-link' href={TWITTER_SOCIAL.href} target='_blank' rel='noopener'>
-                  {TWITTER_SOCIAL.label}
-                </a>
-                ,{' '}
-                <a className='social-link' href={GITHUB_SOCIAL.href} target='_blank' rel='noopener'>
-                  {GITHUB_SOCIAL.label}
-                </a>
-                , and{' '}
-                <a className='social-link' href={LINKEDIN_SOCIAL.href} target='_blank' rel='noopener'>
-                  {LINKEDIN_SOCIAL.label}
-                </a>
-                .
-              </p>
-            </div>
-          </div>
+    <PageContainer>
+      <div className='space-y-8'>
+        <PageIntro content='Rahul Palamarthi' />
+        <div className='space-y-4 font-medium leading-6.5'>
+          <p className='text-text/80'>
+            I'm a software developer at Nxtagent. From the start, I've approached the role more like a{' '}
+            <span className='font-baskerville font-medium italic text-text bg-background-helper'>design engineer</span> focused on the product itself
+            and the craft of painting every pixel.
+          </p>
+          <p className='text-text/80'>
+            I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of everything
+            I do.
+          </p>
+          <p className='text-text/80'>
+            Liked what you found? I'm on{' '}
+            <a className='social-link' href={TWITTER_SOCIAL.href} target='_blank' rel='noopener'>
+              {TWITTER_SOCIAL.label}
+            </a>
+            ,{' '}
+            <a className='social-link' href={GITHUB_SOCIAL.href} target='_blank' rel='noopener'>
+              {GITHUB_SOCIAL.label}
+            </a>
+            , and{' '}
+            <a className='social-link' href={LINKEDIN_SOCIAL.href} target='_blank' rel='noopener'>
+              {LINKEDIN_SOCIAL.label}
+            </a>
+            .
+          </p>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 }
 
