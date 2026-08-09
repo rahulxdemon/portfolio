@@ -4,6 +4,7 @@ export interface INavLink {
   id: string;
   label: string;
   linkOptions: LinkOptions;
+  isEnabled: boolean;
 }
 
 export const NAV_LINKS: INavLink[] = [
@@ -13,6 +14,7 @@ export const NAV_LINKS: INavLink[] = [
     linkOptions: linkOptions({
       to: '/',
     }),
+    isEnabled: true,
   },
   {
     id: 'work',
@@ -20,6 +22,7 @@ export const NAV_LINKS: INavLink[] = [
     linkOptions: linkOptions({
       to: '/work',
     }),
+    isEnabled: true,
   },
   {
     id: 'projects',
@@ -27,6 +30,7 @@ export const NAV_LINKS: INavLink[] = [
     linkOptions: linkOptions({
       to: '/projects',
     }),
+    isEnabled: true,
   },
   {
     id: 'log',
@@ -34,5 +38,6 @@ export const NAV_LINKS: INavLink[] = [
     linkOptions: linkOptions({
       to: '/log',
     }),
+    isEnabled: true,
   },
 ];
