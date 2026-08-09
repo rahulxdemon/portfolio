@@ -12,7 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkIndexRouteImport } from './routes/work/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
-import { Route as LogIndexRouteImport } from './routes/log/index'
+import { Route as LogsIndexRouteImport } from './routes/logs/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -29,42 +29,42 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   path: '/projects/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LogIndexRoute = LogIndexRouteImport.update({
-  id: '/log/',
-  path: '/log/',
+const LogsIndexRoute = LogsIndexRouteImport.update({
+  id: '/logs/',
+  path: '/logs/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/log/': typeof LogIndexRoute
+  '/logs/': typeof LogsIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/log': typeof LogIndexRoute
+  '/logs': typeof LogsIndexRoute
   '/projects': typeof ProjectsIndexRoute
   '/work': typeof WorkIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/log/': typeof LogIndexRoute
+  '/logs/': typeof LogsIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/log/' | '/projects/' | '/work/'
+  fullPaths: '/' | '/logs/' | '/projects/' | '/work/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/log' | '/projects' | '/work'
-  id: '__root__' | '/' | '/log/' | '/projects/' | '/work/'
+  to: '/' | '/logs' | '/projects' | '/work'
+  id: '__root__' | '/' | '/logs/' | '/projects/' | '/work/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  LogIndexRoute: typeof LogIndexRoute
+  LogsIndexRoute: typeof LogsIndexRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
   WorkIndexRoute: typeof WorkIndexRoute
 }
@@ -92,11 +92,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/log/': {
-      id: '/log/'
-      path: '/log'
-      fullPath: '/log/'
-      preLoaderRoute: typeof LogIndexRouteImport
+    '/logs/': {
+      id: '/logs/'
+      path: '/logs'
+      fullPath: '/logs/'
+      preLoaderRoute: typeof LogsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -104,7 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  LogIndexRoute: LogIndexRoute,
+  LogsIndexRoute: LogsIndexRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
   WorkIndexRoute: WorkIndexRoute,
 }
