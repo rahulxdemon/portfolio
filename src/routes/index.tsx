@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useScramble } from 'use-scramble';
+import { GITHUB_SOCIAL, LINKEDIN_SOCIAL, TWITTER_SOCIAL } from '@/features/social/data';
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -25,7 +26,21 @@ function Index() {
                   I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of
                   everything I do.
                 </p>
-                <p className='text-text/80'>Liked what you found? I’m on X, GitHub, and LinkedIn.</p>
+                <p className='text-text/80'>
+                  Liked what you found? I'm on{' '}
+                  <a className='social-link' href={TWITTER_SOCIAL.href} target='_blank' rel='noopener'>
+                    {TWITTER_SOCIAL.label}
+                  </a>
+                  ,{' '}
+                  <a className='social-link' href={GITHUB_SOCIAL.href} target='_blank' rel='noopener'>
+                    {GITHUB_SOCIAL.label}
+                  </a>
+                  , and{' '}
+                  <a className='social-link' href={LINKEDIN_SOCIAL.href} target='_blank' rel='noopener'>
+                    {LINKEDIN_SOCIAL.label}
+                  </a>
+                  .
+                </p>
               </div>
             </div>
           </div>

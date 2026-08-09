@@ -93,4 +93,7 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+  .social-link {
+    @apply underline underline-offset-2 decoration-text/50 hover:decoration-text/90 hover:text-text font-medium transition-colors duration-300;
+  }
 }
