@@ -15,10 +15,10 @@ export const NAV_LINKS: INavLink[] = [
     }),
   },
   {
-    id: 'cv',
+    id: 'work',
     label: 'Work',
     linkOptions: linkOptions({
-      to: '/cv',
+      to: '/work',
     }),
   },
   {
