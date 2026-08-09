@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkIndexRouteImport } from './routes/work/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as LogIndexRouteImport } from './routes/log/index'
-import { Route as CvIndexRouteImport } from './routes/cv/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -35,22 +34,15 @@ const LogIndexRoute = LogIndexRouteImport.update({
   path: '/log/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CvIndexRoute = CvIndexRouteImport.update({
-  id: '/cv/',
-  path: '/cv/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/cv/': typeof CvIndexRoute
   '/log/': typeof LogIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/cv': typeof CvIndexRoute
   '/log': typeof LogIndexRoute
   '/projects': typeof ProjectsIndexRoute
   '/work': typeof WorkIndexRoute
@@ -58,22 +50,20 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/cv/': typeof CvIndexRoute
   '/log/': typeof LogIndexRoute
   '/projects/': typeof ProjectsIndexRoute
   '/work/': typeof WorkIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cv/' | '/log/' | '/projects/' | '/work/'
+  fullPaths: '/' | '/log/' | '/projects/' | '/work/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cv' | '/log' | '/projects' | '/work'
-  id: '__root__' | '/' | '/cv/' | '/log/' | '/projects/' | '/work/'
+  to: '/' | '/log' | '/projects' | '/work'
+  id: '__root__' | '/' | '/log/' | '/projects/' | '/work/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CvIndexRoute: typeof CvIndexRoute
   LogIndexRoute: typeof LogIndexRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
   WorkIndexRoute: typeof WorkIndexRoute
@@ -109,19 +99,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/cv/': {
-      id: '/cv/'
-      path: '/cv'
-      fullPath: '/cv/'
-      preLoaderRoute: typeof CvIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CvIndexRoute: CvIndexRoute,
   LogIndexRoute: LogIndexRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
   WorkIndexRoute: WorkIndexRoute,
