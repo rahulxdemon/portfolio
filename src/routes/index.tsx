@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useScramble } from 'use-scramble';
+import { PageIntro } from '@/features/shared/components/page-intro';
 import { GITHUB_SOCIAL, LINKEDIN_SOCIAL, TWITTER_SOCIAL } from '@/features/social/data';
 
 export const Route = createFileRoute('/')({
@@ -12,9 +13,7 @@ function Index() {
       <div className='py-20'>
         <div className='animate-fade-in-up [animation-delay:200ms] opacity-0'>
           <div className='space-y-8'>
-            <div className='text-base font-semibold'>
-              <p>Rahul Palamarthi</p>
-            </div>
+            <PageIntro content='Rahul Palamarthi' />
             <div className='space-y-4 font-medium leading-6.5'>
               <p className='text-text/80'>
                 I'm a software developer at Nxtagent. From the start, I've approached the role more like a{' '}
