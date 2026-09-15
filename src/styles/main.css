@@ -10,6 +10,8 @@
   --color-background: var(--theme-background);
   --color-text: var(--theme-text);
 
+  --color-primary: var(--theme-primary);
+
   --color-background-helper: var(--theme-background-helper);
 
   --color-secondary-background: var(--theme-secondary-background);
@@ -49,6 +51,8 @@
 
     /*--theme-background: #0625ee;
     --theme-text: #fff;*/
+
+    --theme-primary: #0625ee;
 
     --theme-background-helper: #051ec2;
 

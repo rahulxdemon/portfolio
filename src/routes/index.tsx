@@ -3,6 +3,8 @@ import { useScramble } from 'use-scramble';
 import { PageContainer } from '@/features/shared/components/page-container';
 import { PageIntro } from '@/features/shared/components/page-intro';
 import { GITHUB_SOCIAL, LINKEDIN_SOCIAL, TWITTER_SOCIAL } from '@/features/social/data';
+import 'drawably/style.css';
+import { DrawablyHighlight } from 'drawably/react';
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -21,8 +23,10 @@ function Index() {
               <span className='relative -top-px'>nxtagent.ai</span>
             </span>
             . From the start, I've approached the role more like a{' '}
-            <span className='font-baskerville font-medium italic text-text'>design engineer</span> focused on the product itself and the craft of
-            painting every pixel.
+            <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} fill='#7588FF'>
+              design engineer
+            </DrawablyHighlight>{' '}
+            focused on the product itself and the craft of painting every pixel.
           </p>
           <p className='text-text/80'>
             I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of everything
