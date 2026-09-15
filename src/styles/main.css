@@ -36,7 +36,7 @@
     }
   }
 
-  @keyframes bg-pan {
+  @keyframes bg-pan-2 {
     0% {
       background-position: 5% 5%;
     }
@@ -57,6 +57,45 @@
     }
     100% {
       background-position: 5% 5%;
+    }
+  }
+
+  @keyframes bg-pan-3 {
+    0% {
+      background-position: 5% 5%;
+    }
+    25% {
+      background-position: 5% 100%;
+    }
+    50% {
+      background-position: 90% 5%;
+    }
+    75% {
+      background-position: 5% 100%;
+    }
+    100% {
+      background-position: 5% 5%;
+    }
+  }
+
+  @keyframes bg-pan-4 {
+    0% {
+      background-position: 2% 2%;
+    }
+    20% {
+      background-position: 40% 2%;
+    }
+    40% {
+      background-position: 2% 30%;
+    }
+    60% {
+      background-position: 30% 40%;
+    }
+    80% {
+      background-position: 30% 95%;
+    }
+    100% {
+      background-position: 2% 2%;
     }
   }
 

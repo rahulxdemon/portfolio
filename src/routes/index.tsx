@@ -10,6 +10,22 @@ export const Route = createFileRoute('/')({
   component: Index,
 });
 
+const CURRENT_COMPANY_BG = {
+  PINKY: {
+    image: '/assets/current-company-shader-2.png',
+    animation: 'animate-[bg-pan-2_10s_linear_infinite]',
+  },
+  FLAME: {
+    image: '/assets/current-company-shader-3.png',
+    animation: 'animate-[bg-pan-3_10s_linear_infinite]',
+  },
+  PURPLE_PINK: {
+    image: '/assets/current-company-shader-4.png',
+    animation: 'animate-[bg-pan-4_10s_linear_infinite_reverse]',
+  },
+};
+const BG_OPTIONS = CURRENT_COMPANY_BG.PURPLE_PINK;
+
 function Index() {
   return (
     <PageContainer>
@@ -20,10 +36,11 @@ function Index() {
             I'm a software developer at{' '}
             <span
               style={{
+                backgroundImage: `url(${BG_OPTIONS.image})`,
                 backgroundSize: '275%',
                 backgroundRepeat: 'no-repeat',
               }}
-              className='bg-[url(/assets/current-company-shader-2.png)] group animate-[bg-pan_10s_linear_infinite] text-text px-2 rounded-lg isolate inline-flex items-center gap-1 z-10 relative top-0.75'
+              className={`group ${BG_OPTIONS.animation} text-text px-2 rounded-lg isolate inline-flex items-center gap-1 z-10 relative top-0.75`}
             >
               <img className='size-4' src='/assets/nxtagent-logo-color.svg' alt='Nxtagent logo' width={16} height={16} />
               <span className='relative -top-px'>nxtagent.ai</span>
