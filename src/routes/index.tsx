@@ -18,9 +18,16 @@ function Index() {
         <div className='space-y-4 font-medium leading-6.5'>
           <p className='text-neutral-600'>
             I'm a software developer at{' '}
-            <span className='bg-stone-100 text-text px-2 rounded-lg inline-flex items-center gap-1 relative top-0.75'>
+            <span
+              style={{
+                backgroundSize: '275%',
+                backgroundRepeat: 'no-repeat',
+              }}
+              className='bg-[url(/assets/current-company-shader.png)]  animate-[bg-pan_10s_linear_infinite] text-text px-2 rounded-lg isolate inline-flex items-center gap-1 z-10 relative top-0.75'
+            >
               <img className='size-4' src='/assets/nxtagent-logo-color.svg' alt='Nxtagent logo' width={16} height={16} />
               <span className='relative -top-px'>nxtagent.ai</span>
+              <span className='bg-neutral-100 absolute inset-px -z-10 rounded-[7px]' />
             </span>
             . From the start, I've approached the role more like a{' '}
             <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} fill='#7588FF'>

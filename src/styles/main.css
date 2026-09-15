@@ -36,6 +36,24 @@
     }
   }
 
+  @keyframes bg-pan {
+    0% {
+      background-position: 5% 40%;
+    }
+    20% {
+      background-position: 100% 63%;
+    }
+    40% {
+      background-position: 5% 63%;
+    }
+    60% {
+      background-position: 5% 100%;
+    }
+    100% {
+      background-position: 5% 40%;
+    }
+  }
+
   /* Define the animation utility name */
   --animate-fade-in-up: fade-in-up 0.6s ease-in forwards;
 }
