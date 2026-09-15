@@ -14,10 +14,15 @@ function Index() {
       <div className='space-y-8'>
         <PageIntro content='Rahul Palamarthi' />
         <div className='space-y-4 font-medium leading-6.5'>
-          <p className='text-text/80'>
-            I'm a software developer at Nxtagent. From the start, I've approached the role more like a{' '}
-            <span className='font-baskerville font-medium italic text-text bg-background-helper'>design engineer</span> focused on the product itself
-            and the craft of painting every pixel.
+          <p className='text-neutral-600'>
+            I'm a software developer at{' '}
+            <span className='bg-stone-100 text-text px-2 rounded-lg inline-flex items-center gap-1 relative top-0.75'>
+              <img className='size-4' src='/assets/nxtagent-logo-color.svg' alt='Nxtagent logo' width={16} height={16} />
+              <span className='relative -top-px'>nxtagent.ai</span>
+            </span>
+            . From the start, I've approached the role more like a{' '}
+            <span className='font-baskerville font-medium italic text-text'>design engineer</span> focused on the product itself and the craft of
+            painting every pixel.
           </p>
           <p className='text-text/80'>
             I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of everything

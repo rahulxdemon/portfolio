@@ -44,11 +44,11 @@
     --theme-line-height-base: 1.25;
     --font-size: 14px;
 
-    /*--theme-background: #fff;
-    --theme-text: #000;*/
+    --theme-background: #fff;
+    --theme-text: #000;
 
-    --theme-background: #0625ee;
-    --theme-text: #fff;
+    /*--theme-background: #0625ee;
+    --theme-text: #fff;*/
 
     --theme-background-helper: #051ec2;
 

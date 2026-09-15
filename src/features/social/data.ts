@@ -7,7 +7,7 @@ export const GITHUB_SOCIAL = {
 export const TWITTER_SOCIAL = {
   id: 'twitter',
   label: 'X',
-  href: 'https://x.com/rahulxdemon',
+  href: 'https://x.com/rahul_hx',
 };
 
 export const LINKEDIN_SOCIAL = {
