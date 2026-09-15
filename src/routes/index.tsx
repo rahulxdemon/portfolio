@@ -27,7 +27,7 @@ function Index() {
             >
               <img className='size-4' src='/assets/nxtagent-logo-color.svg' alt='Nxtagent logo' width={16} height={16} />
               <span className='relative -top-px'>nxtagent.ai</span>
-              <span className='bg-white/70 group-hover:bg-white/50 absolute inset-px group-hover:inset-1 transition-[inset,background-color,border-radius] duration-1000 backdrop-blur-xs -z-10 rounded-[7px] group-hover:rounded-[6px]' />
+              <span className='bg-white/70 group-hover:bg-white/50 absolute inset-px group-hover:scale-[calc((100%-2px)/100%)] transition-all ease-out backdrop-blur-xs -z-10 rounded-[7px]' />
             </span>
             . From the start, I've approached the role more like a{' '}
             <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} fill='#7588FF'>
