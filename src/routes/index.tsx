@@ -52,7 +52,7 @@ function Index() {
                 backgroundSize: '275%',
                 backgroundRepeat: 'no-repeat',
               }}
-              className={`${COUNTRY_BG_OPTIONS.animation} bg-clip- text-transparent font-medium`}
+              className={`${COUNTRY_BG_OPTIONS.animation} bg-clip-text text-transparent font-medium`}
             >
               India
             </span>
