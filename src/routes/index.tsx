@@ -46,17 +46,24 @@ function Index() {
         <div className='space-y-4 font-medium leading-6.5'>
           <p className='text-neutral-600'>
             Hey, I'm a software developer based in{' '}
-            <span
-              style={{
-                backgroundImage: `url(${COUNTRY_BG_OPTIONS.image})`,
-                backgroundSize: '275%',
-                backgroundRepeat: 'no-repeat',
-              }}
-              className={`${COUNTRY_BG_OPTIONS.animation} bg-clip-text text-transparent font-medium`}
-            >
-              India
+            <span className='group whitespace-nowrap inline-block'>
+              <span className='scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-100 inline-block transition-[scale,opacity] duration-300'>
+                🦚{' '}
+              </span>
+              <span className='bg-background inline-block -translate-x-4.25 group-hover:translate-x-0 transition-transform ease-out duration-300'>
+                <span
+                  style={{
+                    backgroundImage: `url(${COUNTRY_BG_OPTIONS.image})`,
+                    backgroundSize: '275%',
+                    backgroundRepeat: 'no-repeat',
+                  }}
+                  className={`${COUNTRY_BG_OPTIONS.animation} bg-clip-text text-transparent font-medium`}
+                >
+                  India
+                </span>
+                .
+              </span>
             </span>
-            .
           </p>
           <p className='text-neutral-600'>
             I'm a software developer at{' '}
