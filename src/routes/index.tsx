@@ -24,7 +24,19 @@ const CURRENT_COMPANY_BG = {
     animation: 'animate-[bg-pan-4_10s_linear_infinite_reverse]',
   },
 };
+const COUNTRY_SHADER_BG = {
+  ORANGE_FLAMES: {
+    image: '/assets/country-shader.png',
+    animation: 'animate-[bg-ct_10s_linear_infinite]',
+  },
+  GREEN_LINES: {
+    image: '/assets/country-shader-2.png',
+    animation: 'animate-[bg-ct-2_10s_linear_infinite_alternate]',
+  },
+};
+
 const BG_OPTIONS = CURRENT_COMPANY_BG.PURPLE_PINK;
+const COUNTRY_BG_OPTIONS = COUNTRY_SHADER_BG.ORANGE_FLAMES;
 
 function Index() {
   return (
@@ -32,6 +44,20 @@ function Index() {
       <div className='space-y-8'>
         <PageIntro content='Rahul Palamarthi' />
         <div className='space-y-4 font-medium leading-6.5'>
+          <p className='text-neutral-600'>
+            Hey, I'm a software developer based in{' '}
+            <span
+              style={{
+                backgroundImage: `url(${COUNTRY_BG_OPTIONS.image})`,
+                backgroundSize: '275%',
+                backgroundRepeat: 'no-repeat',
+              }}
+              className={`${COUNTRY_BG_OPTIONS.animation} bg-clip- text-transparent font-medium`}
+            >
+              India
+            </span>
+            .
+          </p>
           <p className='text-neutral-600'>
             I'm a software developer at{' '}
             <span
