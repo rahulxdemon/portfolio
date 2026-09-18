@@ -194,6 +194,6 @@
     cursor: pointer;
   }
   .social-link {
-    @apply underline hover:decoration-wavy underline-offset-2 decoration-text/50 hover:decoration-text/80 hover:text-text transition-colors duration-300;
+    @apply underline hover:decoration-wavy underline-offset-2 decoration-neutral-400 hover:decoration-neutral-800 hover:text-neutral-800 transition-colors duration-300;
   }
 }
