@@ -73,7 +73,7 @@ function Index() {
             <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} fill='#7588FF'>
               design engineer
             </DrawablyHighlight>{' '}
-            mindset - shaped by the product itself and the craft of painting every pixel.
+            mindset - driven by the product itself and the craft of painting every pixel.
           </p>
           <p className='text-neutral-600'>
             I'm also drawn to backend development, systems, and infrastructure, as I care about how everything works beneath the surface.
