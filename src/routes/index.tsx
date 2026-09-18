@@ -66,11 +66,14 @@ function Index() {
             </span>
           </p>
           <p className='text-neutral-600'>
-            I'm a software developer at <CurrentCompany />. From the start, I've approached the role more like a{' '}
+            Currently an engineer at <CurrentCompany /> focused on building frontend applications from the ground up.
+          </p>
+          <p className='text-neutral-600'>
+            Alongside engineering, I bring a{' '}
             <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} fill='#7588FF'>
               design engineer
             </DrawablyHighlight>{' '}
-            focused on the product itself and the craft of painting every pixel.
+            mindset - centered on the product itself and the craft of painting every pixel.
           </p>
           <p className='text-text/80'>
             I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of everything
