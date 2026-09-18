@@ -75,9 +75,9 @@ function Index() {
             </DrawablyHighlight>{' '}
             mindset - shaped by the product itself and the craft of painting every pixel.
           </p>
-          <p className='text-text/80'>
-            I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of everything
-            I do.
+          <p className='text-neutral-600'>
+            I'm driven, sharp, and deeply focused on startups. As a <EngineerSc />, I've put early-stage products at the center of everything I do -
+            from shaping the vision to shipping the details that make it real.
           </p>
           <p className='text-neutral-600'>
             Liked what you found? I'm on{' '}
@@ -102,7 +102,7 @@ function Index() {
 
 function EngineerSc() {
   const { ref, replay } = useScramble({
-    text: 'engineer',
+    text: 'founding engineer',
     speed: 0.6, // Explicitly set the base speed (default is 1)
     tick: 1, // Reduce this so it advances quickly along the string
     step: 1, // Ensures it introduces 1 new character position per redraw
