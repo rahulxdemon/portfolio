@@ -79,8 +79,8 @@ function Index() {
             I'm also drawn to backend development, systems, and infrastructure, as I care about how everything works beneath the surface.
           </p>
           <p className='text-neutral-600'>
-            I'm driven, sharp, and deeply focused on startups. As a <EngineerSc />, I've put early-stage products at the center of everything I do -
-            from shaping the vision to shipping the details that make it real.
+            I'm deeply focused on startups. As a <EngineerSc />, I've put early-stage products at the center of everything I do - from shaping the
+            vision to shipping the details that make it real.
           </p>
           <p className='text-neutral-600'>
             Liked what you found? I'm on{' '}
