@@ -73,7 +73,7 @@ function Index() {
             <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} fill='#7588FF'>
               design engineer
             </DrawablyHighlight>{' '}
-            mindset - centered on the product itself and the craft of painting every pixel.
+            mindset - shaped by the product itself and the craft of painting every pixel.
           </p>
           <p className='text-text/80'>
             I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of everything
