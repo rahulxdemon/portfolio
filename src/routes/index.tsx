@@ -79,7 +79,7 @@ function Index() {
             I'm driven, sharp, and deeply focused on startups. As a founding <EngineerSc />, I've put early-stage products at the center of everything
             I do.
           </p>
-          <p className='text-text/80'>
+          <p className='text-neutral-600'>
             Liked what you found? I'm on{' '}
             <a className='social-link' href={TWITTER_SOCIAL.href} target='_blank' rel='noopener'>
               {TWITTER_SOCIAL.label}
