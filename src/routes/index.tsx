@@ -66,7 +66,7 @@ function Index() {
             </span>
           </p>
           <p className='text-neutral-600'>
-            Currently an engineer at <CurrentCompany /> focused on building frontend applications from the ground up.
+            Currently an engineer at <CurrentCompany />, where I’m building frontend applications from the ground up.
           </p>
           <p className='text-neutral-600'>
             Alongside engineering, I bring a{' '}
