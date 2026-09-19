@@ -132,8 +132,18 @@
     }
   }
 
+  @keyframes block-char {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
   /* Define the animation utility name */
   --animate-fade-in-up: fade-in-up 0.6s ease-in forwards;
+  --animate-block-char: block-char 10s steps(34, end) forwards infinite;
 }
 
 @layer base {
