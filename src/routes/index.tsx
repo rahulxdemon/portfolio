@@ -121,7 +121,7 @@ function EngineerSc() {
     // biome-ignore lint/a11y/noStaticElementInteractions: intended behaviour
     <span
       ref={ref}
-      className='font-chivo font-medium uppercase text-text relative isolate bg-background before:content-["▉"] before:absolute before:-top-1 before:left-[0.5px] before:mix-blend-difference before:text-background before:font-chivo before:pointer-events-none'
+      className='font-chivo font-medium uppercase text-text relative isolate bg-background before:content-["▌"] before:absolute before:-top-1 before:left-0 before:mix-blend-difference before:text-background before:font-chivo before:pointer-events-none'
       onMouseEnter={handleReplay}
       onMouseLeave={handleReplay}
       onFocus={handleReplay}
