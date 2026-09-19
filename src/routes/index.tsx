@@ -131,17 +131,19 @@ function EngineerSc() {
 
 function CurrentCompany() {
   return (
-    <span
-      style={{
-        backgroundImage: `url(${BG_OPTIONS.image})`,
-        backgroundSize: '275%',
-        backgroundRepeat: 'no-repeat',
-      }}
-      className={`group ${BG_OPTIONS.animation} text-text px-2 rounded-lg isolate inline-flex items-center gap-1 z-10 relative top-0.75`}
-    >
-      <img className='size-4' src='/assets/nxtagent-logo-color.svg' alt='Nxtagent logo' width={16} height={16} />
-      <span className='relative -top-px'>nxtagent.ai</span>
-      <span className='bg-white/70 group-hover:bg-white/50 absolute inset-0.5 group-hover:scale-[calc((100%-2px)/100%)] transition-all ease-out backdrop-blur-xs -z-10 rounded-[6px]' />
-    </span>
+    <a href='https://nxtagent.ai' target='_blank' rel='noopener'>
+      <span
+        style={{
+          backgroundImage: `url(${BG_OPTIONS.image})`,
+          backgroundSize: '275%',
+          backgroundRepeat: 'no-repeat',
+        }}
+        className={`group ${BG_OPTIONS.animation} text-text px-2 rounded-lg isolate inline-flex items-center gap-1 z-10 relative top-0.75`}
+      >
+        <img className='size-4' src='/assets/nxtagent-logo-color.svg' alt='Nxtagent logo' width={16} height={16} />
+        <span className='relative -top-px'>nxtagent.ai</span>
+        <span className='bg-white/70 group-hover:bg-white/50 absolute inset-0.5 group-hover:scale-[calc((100%-2px)/100%)] transition-all ease-out backdrop-blur-xs -z-10 rounded-[6px]' />
+      </span>
+    </a>
   );
 }
