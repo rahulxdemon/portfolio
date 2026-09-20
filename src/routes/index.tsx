@@ -5,7 +5,6 @@ import { PageIntro } from '@/features/shared/components/page-intro';
 import { GITHUB_SOCIAL, LINKEDIN_SOCIAL, TWITTER_SOCIAL } from '@/features/social/data';
 import 'drawably/style.css';
 import { DrawablyHighlight } from 'drawably/react';
-import { BaseWork } from '@/features/work/base-work';
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -100,7 +99,7 @@ function Index() {
           </p>
         </div>
 
-        <BaseWork />
+        {/*<BaseWork />*/}
       </div>
     </PageContainer>
   );

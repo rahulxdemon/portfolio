@@ -16,6 +16,7 @@ function RootRouteComponent() {
       <div className='text-sm'>
         {/*<BaseHeaderV2 />*/}
         <Outlet />
+        {/*<NavDock />*/}
       </div>
     </Fragment>
   );
