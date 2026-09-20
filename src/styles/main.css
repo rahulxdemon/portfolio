@@ -172,7 +172,7 @@
   /* Define the animation utility name */
   --animate-fade-in-up: fade-in-up 0.6s ease-in forwards;
   --animate-block-char: block-char 10s steps(34, end) forwards infinite;
-  --animate-text-cycle: text-cycle 8s infinite linear;
+  --animate-text-cycle: text-cycle 2.5s infinite linear;
 }
 
 @layer base {

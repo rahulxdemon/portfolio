@@ -76,7 +76,12 @@ function Index() {
             mindset - driven by the product itself and the craft of painting every pixel.
           </p>
           <p className='text-neutral-600'>
-            I'm also drawn to backend development, systems, and infrastructure, as I care about how everything works beneath the surface.
+            I'm also drawn to backend development,{' '}
+            <span className='inline-flex items-center gap-0 z-10 relative top-px'>
+              <img className='w-5 relative top-0.5' src='/assets/monitor.png' alt='monitor' width={16} />
+              systems
+            </span>
+            , and <span>infrastructure</span>, as I care about how everything works beneath the surface.
           </p>
           <p className='text-neutral-600'>
             I'm deeply focused on startups. As a <EngineerSc />, I've put early-stage products at the center of everything I do - from shaping the
