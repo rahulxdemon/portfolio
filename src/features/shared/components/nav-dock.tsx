@@ -40,7 +40,7 @@ function NavLink({ link }: { link: INavLink }) {
       inactiveProps={{ className: 'text-neutral-600 hover:text-text/90' }}
       activeOptions={{ exact: true }}
     >
-      <span className='group-data-[status=active]:opacity-100 opacity-0'>▷</span> {link.label}
+      <span className='group-data-[status=active]:opacity-100 opacity-0 animate-text-cycle'>▷</span> {link.label}
     </Link>
   );
 }
