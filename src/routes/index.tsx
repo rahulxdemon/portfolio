@@ -70,7 +70,7 @@ function Index() {
           </p>
           <p className='text-neutral-600'>
             Alongside engineering, I bring a{' '}
-            <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} fill='#7588FF'>
+            <DrawablyHighlight className='font-baskerville! font-medium italic text-primary' seed={117000024} boil={1} fill='#7588FF'>
               design engineer
             </DrawablyHighlight>{' '}
             mindset - driven by the product itself and the craft of painting every pixel.
