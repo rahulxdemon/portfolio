@@ -8,9 +8,9 @@ export function NavDock() {
         style={{
           backdropFilter: 'url("#svgfilter")',
         }}
-        className='h-full'
+        className='h-full' // bg-neutral-200/30
       >
-        <div className='flex items-center justify-start gap-6 max-w-158 mx-auto h-full'>
+        <div className='flex items-center justify-start gap-6 max-w-158 px-0.5 mx-auto h-full'>
           {NAV_LINKS.filter((link) => link.isEnabled).map((link) => (
             <NavLink key={link.id} link={link} />
           ))}
@@ -34,13 +34,13 @@ function NavLink({ link }: { link: INavLink }) {
   return (
     <Link
       key={link.id}
-      className='focus-visible:outline-text capitalize focus-visible:outline-1 italic transition-colors duration-300 py-[0.5ch]'
+      className='group focus-visible:outline-text focus-visible:outline-1 italic transition-colors duration-300 py-[0.5ch]'
       {...link.linkOptions}
       activeProps={{ className: 'text-text' }}
       inactiveProps={{ className: 'text-neutral-600 hover:text-text/90' }}
       activeOptions={{ exact: true }}
     >
-      {link.label}
+      <span className='group-data-[status=active]:opacity-100 opacity-0'>▷</span> {link.label}
     </Link>
   );
 }

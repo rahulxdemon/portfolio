@@ -10,7 +10,7 @@ export interface INavLink {
 export const NAV_LINKS: INavLink[] = [
   {
     id: 'about',
-    label: 'about',
+    label: 'About',
     linkOptions: linkOptions({
       to: '/',
     }),
