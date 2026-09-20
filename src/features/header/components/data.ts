@@ -30,14 +30,6 @@ export const NAV_LINKS: INavLink[] = [
     linkOptions: linkOptions({
       to: '/projects',
     }),
-    isEnabled: true,
-  },
-  {
-    id: 'logs',
-    label: 'logs',
-    linkOptions: linkOptions({
-      to: '/logs',
-    }),
-    isEnabled: true,
+    isEnabled: false,
   },
 ];
