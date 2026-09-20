@@ -1,10 +1,10 @@
 # Completed
 
 - Page navigation with liquid glass
+- Backend systems style
 
 # Not completed
 
-- Backend systems style
 - Migrate to astro
 
 - Loading ui with blue background
