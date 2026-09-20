@@ -4,7 +4,7 @@ import { PageContainer } from '@/features/shared/components/page-container';
 import { PageIntro } from '@/features/shared/components/page-intro';
 import { GITHUB_SOCIAL, LINKEDIN_SOCIAL, TWITTER_SOCIAL } from '@/features/social/data';
 import 'drawably/style.css';
-import { DrawablyHighlight } from 'drawably/react';
+import { DrawablyHighlight, DrawablyUnderline } from 'drawably/react';
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -77,11 +77,22 @@ function Index() {
           </p>
           <p className='text-neutral-600'>
             I'm also drawn to backend development,{' '}
-            <span className='inline-flex items-center gap-0 z-10 relative top-px'>
-              <img className='w-5 relative top-0.5' src='/assets/monitor.png' alt='monitor' width={16} />
+            <span className='inline-flex items-center gap-0 z-10 relative top-px group'>
+              <img className='w-5 relative top-0.5 group-hover:hue-rotate-90' src='/assets/monitor.png' alt='monitor' width={16} />
               systems
             </span>
-            , and <span>infrastructure</span>, as I care about how everything works beneath the surface.
+            , and{' '}
+            <DrawablyUnderline
+              className='font-semibold text-neutral-400/80 font-jakarta!'
+              seed={231451524}
+              roughness={1.3}
+              boil={1}
+              width={1.5}
+              stroke='#5eead4'
+            >
+              infrastructure
+            </DrawablyUnderline>
+            , as I care about how everything works beneath the surface.
           </p>
           <p className='text-neutral-600'>
             I'm deeply focused on startups. As a <EngineerSc />, I've put early-stage products at the center of everything I do - from shaping the
