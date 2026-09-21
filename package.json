@@ -4,9 +4,10 @@
   "version": "0.0.2",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "format": "biome format ./src",
     "format:fix": "biome format --write ./src",
     "lint": "biome lint ./src",
@@ -15,6 +16,7 @@
     "check:fix": "biome check --write ./src"
   },
   "dependencies": {
+    "astro": "^7.3.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "drawably": "^0.4.2",
