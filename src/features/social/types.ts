@@ -1,5 +1,5 @@
-export type TPortfolioSocial = {
+export type TSocial = {
   id: string;
   label: string;
   href: string;
-}[];
+};
