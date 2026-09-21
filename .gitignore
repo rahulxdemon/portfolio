@@ -12,6 +12,7 @@ dist
 cert
 dist-ssr
 *.local
+.astro
 
 # Editor directories and files
 .idea
