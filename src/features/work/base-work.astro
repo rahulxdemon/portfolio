@@ -1,12 +1,12 @@
 ---
 import { WORK_EXPERIENCE } from "@/features/shared/data/cv";
 import PageContainer from "@/features/shared/components/page-container.astro";
-import PageIntro from "@/features/shared/components/page-intro.astro";
+import PageInfo from "@/features/shared/components/page-info.astro";
 ---
 
 <PageContainer>
   <div class="space-y-8">
-    <PageIntro content="Work" />
+    <PageInfo content="Work" />
     <div class="text-neutral-600 font-medium group/wrapper">
       {WORK_EXPERIENCE.map((work, i) => (
         <div class="group/parent hover:px-2 hover:opacity-100 hover:text-text transition-[padding,opacity] py-1.25 group-hover/wrapper:opacity-60 flex items-center justify-between gap-4 duration-300">
