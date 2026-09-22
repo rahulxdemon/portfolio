@@ -1,6 +1,5 @@
 ---
 import { NAV_LINKS } from "@/features/shared/data/nav";
-import { undefined } from "astro:schema";
 
 const { pathname } = Astro.url;
 ---
@@ -20,7 +19,8 @@ const { pathname } = Astro.url;
           <a
             class={`group focus-visible:outline-text focus-visible:outline-1 italic transition-colors duration-300 py-[0.5ch] ${isActive ? "text-text" : "text-neutral-500 hover:text-text/90"}`}
             href={link.linkOptions.to}
-            data-status={isActive ? "active" : undefined}
+            data-status={isActive ? "active" : "inactive"}
+            aria-current={isActive ? "page" : "false"}
           >
             <span class="group-data-[status=active]:opacity-100 opacity-0 animate-text-cycle">
               ▷
