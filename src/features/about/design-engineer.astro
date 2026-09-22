@@ -1,0 +1,20 @@
+<span id="de-content" class="font-baskerville! font-medium italic text-primary">
+  design engineer
+</span>
+
+<script>
+  import { drawablyHighlight } from "drawably";
+
+  const elId = "de-content";
+  const el = document.getElementById(elId);
+
+  if (el) {
+    drawablyHighlight(el, {
+      seed: 117000024,
+      boil: 1,
+      fill: "#7588FF",
+    });
+  } else {
+    console.log(`No element with id: ${elId}`);
+  }
+</script>

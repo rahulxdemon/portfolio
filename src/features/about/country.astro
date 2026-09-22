@@ -1,0 +1,33 @@
+---
+const COUNTRY_SHADER_BG = {
+  ORANGE_FLAMES: {
+    image: "/assets/country-shader.png",
+    animation: "animate-[bg-ct_10s_linear_infinite]",
+  },
+  GREEN_LINES: {
+    image: "/assets/country-shader-2.png",
+    animation: "animate-[bg-ct-2_10s_linear_infinite_alternate]",
+  },
+};
+
+const COUNTRY_BG_OPTIONS = COUNTRY_SHADER_BG.ORANGE_FLAMES;
+---
+
+<span class="group whitespace-nowrap inline-block">
+  <span class="scale-0 opacity-0 group-hover:opacity-100 group-hover:scale-100 inline-block transition-[scale,opacity] duration-300">
+    🦚{" "}
+  </span>
+  <span class="bg-background inline-block -translate-x-4.25 group-hover:translate-x-0 transition-transform ease-out duration-300">
+    <span
+      style={{
+        backgroundImage: `url(${COUNTRY_BG_OPTIONS.image})`,
+        backgroundSize: "275%",
+        backgroundRepeat: "no-repeat",
+      }}
+      class={`${COUNTRY_BG_OPTIONS.animation} bg-clip-text text-transparent font-medium`}
+    >
+      India
+    </span>
+    .
+  </span>
+</span>

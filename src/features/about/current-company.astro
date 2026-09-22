@@ -1,0 +1,39 @@
+---
+const CURRENT_COMPANY_BG = {
+  PINKY: {
+    image: "/assets/current-company-shader-2.png",
+    animation: "animate-[bg-pan-2_10s_linear_infinite]",
+  },
+  FLAME: {
+    image: "/assets/current-company-shader-3.png",
+    animation: "animate-[bg-pan-3_10s_linear_infinite]",
+  },
+  PURPLE_PINK: {
+    image: "/assets/current-company-shader-4.png",
+    animation: "animate-[bg-pan-4_10s_linear_infinite_reverse]",
+  },
+};
+
+const BG_OPTIONS = CURRENT_COMPANY_BG.PURPLE_PINK;
+---
+
+<a href="https://nxtagent.ai" target="_blank" rel="noopener">
+  <span
+    style={{
+      backgroundImage: `url(${BG_OPTIONS.image})`,
+      backgroundSize: "275%",
+      backgroundRepeat: "no-repeat",
+    }}
+    class={`group ${BG_OPTIONS.animation} text-text px-2 rounded-lg isolate inline-flex items-center gap-1 z-10 relative top-0.75`}
+  >
+    <img
+      class="size-4"
+      src="/assets/nxtagent-logo-color.svg"
+      alt="Nxtagent logo"
+      width={16}
+      height={16}
+    />
+    <span class="relative -top-px">nxtagent.ai</span>
+    <span class="bg-white/70 group-hover:bg-white/50 absolute inset-0.5 group-hover:scale-[calc((100%-2px)/100%)] transition-all ease-out backdrop-blur-xs -z-10 rounded-[6px]" />
+  </span>
+</a>

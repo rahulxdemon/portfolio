@@ -1,0 +1,83 @@
+---
+import Country from "./country.astro";
+import CurrentCompany from "./current-company.astro";
+import PageIntro from "@/features/shared/components/page-intro.astro";
+import PageContainer from "@/features/shared/components/page-container.astro";
+import EngineerSC from "./engineer-sc.astro";
+import DesignEngineer from "./design-engineer.astro";
+import Infra from "./infra.astro";
+import {
+  GITHUB_SOCIAL,
+  TWITTER_SOCIAL,
+  LINKEDIN_SOCIAL,
+} from "@/features/social/data";
+import "drawably/style.css";
+---
+
+<PageContainer>
+  <div class="space-y-8">
+    <PageIntro content="Rahul Palamarthi" />
+    <div class="space-y-4 font-medium leading-6.5 text-sm">
+      <p class="text-neutral-600">
+        Hey, I'm a software developer based in <Country />
+      </p>
+      <p class="text-neutral-600">
+        Currently an engineer at <CurrentCompany />, where I’m building frontend
+        applications from the ground up.
+      </p>
+      <p class="text-neutral-600">
+        Alongside engineering, I bring a <DesignEngineer /> mindset - driven by
+        the product itself and the craft of painting every pixel.
+      </p>
+      <p class="text-neutral-600">
+        I'm also drawn to backend development,{" "}
+        <span class="inline-flex items-center gap-0 z-10 relative top-px group">
+          <img
+            class="w-5 relative top-0.5 group-hover:hue-rotate-90"
+            src="/assets/monitor.png"
+            alt="monitor"
+            width={16}
+          />
+          systems
+        </span>
+        , and <Infra />, as I care about how everything works beneath the
+        surface.
+      </p>
+      <p class="text-neutral-600">
+        I'm deeply focused on startups. As a <EngineerSC />, I've put
+        early-stage products at the center of everything I do - from shaping the
+        vision to shipping the details that make it real.
+      </p>
+      <p class="text-neutral-600">
+        Liked what you found? I'm on{" "}
+        <a
+          class="social-link"
+          href={TWITTER_SOCIAL.href}
+          target="_blank"
+          rel="noopener"
+        >
+          {TWITTER_SOCIAL.label}
+        </a>
+        ,{" "}
+        <a
+          class="social-link"
+          href={GITHUB_SOCIAL.href}
+          target="_blank"
+          rel="noopener"
+        >
+          {GITHUB_SOCIAL.label}
+        </a>
+        , and{" "}
+        <a
+          class="social-link"
+          href={LINKEDIN_SOCIAL.href}
+          target="_blank"
+          rel="noopener"
+        >
+          {LINKEDIN_SOCIAL.label}
+        </a>
+        .
+      </p>
+    </div>
+  </div>
+</PageContainer>

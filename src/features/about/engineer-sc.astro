@@ -1,0 +1,25 @@
+---
+// const { ref, replay } = useScramble({
+//   text: 'founding engineer',
+//   speed: 0.6, // Explicitly set the base speed (default is 1)
+//   tick: 1, // Reduce this so it advances quickly along the string
+//   step: 1, // Ensures it introduces 1 new character position per redraw
+//   scramble: 25, // Increase this so characters shuffle longer before resolving
+//   overdrive: false,
+// });
+
+// function handleReplay() {
+//   replay();
+// }
+---
+
+<span class='font-chivo font-medium uppercase text-text relative isolate bg-background before:content-["▌"] before:absolute before:-top-1 before:left-0 before:mix-blend-difference before:text-[#ED01E4] hover:before:text-red-600 before:font-chivo before:pointer-events-none before:animate-block-char'>
+  founding engineer
+</span>
+
+<!-- <span
+  className='font-chivo font-medium uppercase text-text relative isolate bg-background before:content-["▌"] before:absolute before:-top-1 before:left-0 before:mix-blend-difference before:text-[#ED01E4] hover:before:text-red-600 before:font-chivo before:pointer-events-none before:animate-block-char'
+  onMouseEnter={handleReplay}
+  onMouseLeave={handleReplay}
+  onFocus={handleReplay}
+/> -->
