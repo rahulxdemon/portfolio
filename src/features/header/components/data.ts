@@ -1,9 +1,9 @@
-import { type LinkOptions, linkOptions } from '@tanstack/react-router';
-
 export interface INavLink {
   id: string;
   label: string;
-  linkOptions: LinkOptions;
+  linkOptions: {
+    to: string;
+  };
   isEnabled: boolean;
 }
 
@@ -11,25 +11,25 @@ export const NAV_LINKS: INavLink[] = [
   {
     id: 'about',
     label: 'About',
-    linkOptions: linkOptions({
+    linkOptions: {
       to: '/',
-    }),
+    },
     isEnabled: true,
   },
   {
     id: 'work',
     label: 'Work',
-    linkOptions: linkOptions({
+    linkOptions: {
       to: '/work',
-    }),
+    },
     isEnabled: true,
   },
   {
     id: 'projects',
     label: 'projects',
-    linkOptions: linkOptions({
+    linkOptions: {
       to: '/projects',
-    }),
+    },
     isEnabled: false,
   },
 ];

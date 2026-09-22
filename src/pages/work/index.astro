@@ -1,0 +1,15 @@
+---
+import Layout from "@/features/shared/components/layout.astro";
+import NavLayout from "@/features/shared/components/nav-layout.astro";
+import PageIntro from "@/features/shared/components/page-intro.astro";
+import BaseWork from "@/features/work/base-work.astro";
+---
+
+<Layout>
+  <NavLayout>
+    <div class="space-y-8">
+      <PageIntro content="Work" />
+      <BaseWork />
+    </div>
+  </NavLayout>
+</Layout>
