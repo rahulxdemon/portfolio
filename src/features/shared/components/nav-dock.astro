@@ -2,6 +2,8 @@
 import { NAV_LINKS } from "@/features/shared/data/nav";
 
 const { pathname } = Astro.url;
+const trimmedUrl =
+  pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
 ---
 
 <nav class="font-baskerville fixed bottom-0 w-full h-14 z-30 text-sm">
@@ -13,7 +15,7 @@ const { pathname } = Astro.url;
   >
     <div class="flex items-center justify-start gap-6 max-w-158 px-0.5 mx-auto h-full">
       {NAV_LINKS.filter((link) => link.isEnabled).map((link) => {
-        const isActive = pathname === link.linkOptions.to;
+        const isActive = trimmedUrl === link.linkOptions.to;
 
         return (
           <a
