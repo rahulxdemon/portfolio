@@ -2,9 +2,13 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --font-baskerville: "Libre Baskerville", monospace;
+  /*--font-baskerville: "Libre Baskerville", monospace;
   --font-jakarta: "Plus Jakarta Sans", serif;
-  --font-chivo: "Chivo Mono", monospace;
+  --font-chivo: "Chivo Mono", monospace;*/
+
+  --font-baskerville: var(--font-baskerville);
+  --font-jakarta: var(--font-jakarta);
+  --font-chivo: var(--font-chivo);
 
   --color-background: var(--theme-background);
   --color-text: var(--theme-text);
