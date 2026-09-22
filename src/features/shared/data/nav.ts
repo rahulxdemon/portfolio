@@ -1,4 +1,4 @@
-export interface INavLink {
+interface INavLink {
   id: string;
   label: string;
   linkOptions: {
