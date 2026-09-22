@@ -1,0 +1,29 @@
+---
+import { SITE } from "@/features/shared/data/site";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+console.log("Title: ", title);
+---
+
+<title>{title ?? SITE.title}</title>
+<meta name="title" content={SITE.title} />
+<meta name="description" content={SITE.description} />
+
+<meta property="og:site_name" content="rahulgg.in" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={SITE.website} />
+<meta property="og:title" content={SITE.title} />
+<meta property="og:description" content={SITE.description} />
+<meta property="og:image" content={SITE.ogImage} />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={SITE.website} />
+<meta property="twitter:title" content={SITE.title} />
+<meta property="twitter:description" content={SITE.description} />
+<meta property="twitter:image" content={SITE.ogImage} />
+
+<link rel="sitemap" href="/sitemap-index.xml" />

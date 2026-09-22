@@ -1,11 +1,16 @@
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, fontProviders } from 'astro/config';
+import { SITE } from '@/features/shared/data/site';
 
 // https://astro.build/config
 export default defineConfig({
+  site: SITE.website,
+
   vite: {
     plugins: [tailwindcss()],
   },
+
   fonts: [
     {
       provider: fontProviders.google(),
@@ -29,7 +34,10 @@ export default defineConfig({
       weights: [500],
     },
   ],
+
   server: {
     port: 3000,
   },
+
+  integrations: [sitemap()],
 });
