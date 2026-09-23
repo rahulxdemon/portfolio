@@ -1,4 +1,4 @@
-import type { TSocial } from "./types";
+import type { TSocial } from './types';
 
 export const GITHUB_SOCIAL: TSocial = {
   id: 'github',
