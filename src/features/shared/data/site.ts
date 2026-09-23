@@ -2,7 +2,12 @@ interface ISite {
   website: string;
   title: string;
   description: string;
-  ogImage: string;
+  og: {
+    image: {
+      url: string;
+      alt: string;
+    };
+  };
   siteName: string;
 }
 
@@ -10,6 +15,11 @@ export const SITE: ISite = {
   website: 'https://rahulgg.in',
   title: 'Rahul Palamarthi',
   description: 'The personal website of Rahul Palamarthi - Product & craft',
-  ogImage: 'https://rahulgg.in/assets/og.png',
+  og: {
+    image: {
+      url: 'https://rahulgg.in/assets/og/og.svg',
+      alt: 'Rahul Palamarthi',
+    },
+  },
   siteName: 'rahulgg.in',
 };
