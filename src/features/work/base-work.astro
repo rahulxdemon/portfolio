@@ -7,15 +7,23 @@ import PageInfo from "@/features/shared/components/page-info.astro";
 <PageContainer>
   <div class="space-y-8">
     <PageInfo content="Work" />
-    <div class="text-neutral-600 font-medium group/wrapper">
-      {WORK_EXPERIENCE.map((work, i) => (
-        <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
-          <p class="text-sm">{work.company}</p>
-          <div class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
-            {work.year}
+    <div class="text-neutral-600 font-medium text-sm space-y-4 leading-6.5">
+      <div>
+        <p>
+          Over the years, I've had the chance to work with a few great teams and
+          build things with passion and interest.
+        </p>
+      </div>
+      <div class="group/wrapper">
+        {WORK_EXPERIENCE.map((work, i) => (
+          <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
+            <p class="text-sm">{work.company}</p>
+            <div class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
+              {work.year}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 </PageContainer>
