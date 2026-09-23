@@ -4,7 +4,10 @@ interface ISite {
   description: string;
   og: {
     image: {
-      url: string;
+      url: {
+        light: string;
+        dark: string;
+      };
       alt: string;
     };
   };
@@ -17,7 +20,10 @@ export const SITE: ISite = {
   description: 'The personal website of Rahul Palamarthi - Product & craft',
   og: {
     image: {
-      url: 'https://rahulgg.in/assets/og/og.svg',
+      url: {
+        light: 'https://rahulgg.in/assets/og/og.svg',
+        dark: 'https://rahulgg.in/assets/og/og-dark.svg',
+      },
       alt: 'Rahul Palamarthi',
     },
   },
