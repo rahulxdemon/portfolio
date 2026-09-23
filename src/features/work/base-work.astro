@@ -9,9 +9,9 @@ import PageInfo from "@/features/shared/components/page-info.astro";
     <PageInfo content="Work" />
     <div class="text-neutral-600 font-medium group/wrapper">
       {WORK_EXPERIENCE.map((work, i) => (
-        <div class="group/parent hover:px-2 hover:opacity-100 hover:text-text transition-[padding,opacity] py-1.25 group-hover/wrapper:opacity-60 flex items-center justify-between gap-4 duration-300">
-          <h2 class="text-sm pb-1">{work.company}</h2>
-          <div class="text-xs font-medium text-neutral-400 group-hover/parent:text-neutral-600 transition-colors duration-300">
+        <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
+          <p class="text-sm">{work.company}</p>
+          <div class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
             {work.year}
           </div>
         </div>
