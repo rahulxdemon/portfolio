@@ -240,6 +240,6 @@
     cursor: pointer;
   }
   .social-link {
-    @apply underline hover:decoration-wavy underline-offset-2 decoration-neutral-400 hover:decoration-neutral-800 hover:text-neutral-800 transition-colors duration-300;
+    @apply underline hover:decoration-wavy underline-offset-2 visited:text-inherit decoration-neutral-400 hover:decoration-neutral-800 hover:text-neutral-800 transition-colors duration-300;
   }
 }
