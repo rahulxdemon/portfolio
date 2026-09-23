@@ -1,15 +1,10 @@
 @layer theme, base, components, utilities;
+
 @import "tailwindcss/theme.css" layer(theme);
 /*@import "tailwindcss/preflight.css" layer(base);*/
 @import "tailwindcss/utilities.css" layer(utilities);
 
-@import "tw-animate-css";
-
 @theme inline {
-  /*--font-baskerville: "Libre Baskerville", monospace;
-  --font-jakarta: "Plus Jakarta Sans", serif;
-  --font-chivo: "Chivo Mono", monospace;*/
-
   --font-baskerville: var(--font-baskerville);
   --font-jakarta: var(--font-jakarta);
   --font-chivo: var(--font-chivo);
