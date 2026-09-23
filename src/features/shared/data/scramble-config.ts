@@ -1,7 +1,7 @@
-import type { UseScrambleProps } from 'use-scramble';
+import type { ScrambleOptions } from '@/features/shared/utils/scramble';
 
 export const SCRAMBLE_CONFIG = (text: string) => {
-  const config: UseScrambleProps = {
+  const config: ScrambleOptions = {
     text,
     speed: 0.6, // Explicitly set the base speed (default is 1)
     tick: 1, // Reduce this so it advances quickly along the string

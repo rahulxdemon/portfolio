@@ -18,8 +18,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.3.3",
-    "drawably": "^0.4.2",
-    "use-scramble": "^2.2.15"
+    "drawably": "^0.4.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.1",

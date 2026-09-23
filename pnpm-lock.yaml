@@ -17,9 +17,6 @@ importers:
       drawably:
         specifier: ^0.4.2
         version: 0.4.2(react@19.2.7)
-      use-scramble:
-        specifier: ^2.2.15
-        version: 2.2.15(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.5.1
@@ -1464,11 +1461,6 @@ packages:
   radix3@1.1.2:
     resolution: {integrity: sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==}
 
-  react-dom@19.2.7:
-    resolution: {integrity: sha512-t0BRVXvbiE/o20Hfw669rLbMCDWtYZLvmJigy2f0MxsXF+71pxhR3xOkspmsO8h3ZlNzyibAmtCa3l4lYKk6gQ==}
-    peerDependencies:
-      react: ^19.2.7
-
   react@19.2.7:
     resolution: {integrity: sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==}
     engines: {node: '>=0.10.0'}
@@ -1503,9 +1495,6 @@ packages:
   sax@1.6.1:
     resolution: {integrity: sha512-42tBVwLWnaQvW5zc4HbZrTuWccECCZfBi92FDuwtqxasH+JbPB3/FOKb1m222K42R4WxuxzzMsTswfzgtSu64Q==}
     engines: {node: '>=11.0.0'}
-
-  scheduler@0.27.0:
-    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
   semver@7.8.5:
     resolution: {integrity: sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==}
@@ -1686,13 +1675,6 @@ packages:
         optional: true
       uploadthing:
         optional: true
-
-  use-scramble@2.2.15:
-    resolution: {integrity: sha512-3+ngTV6OpkY9JT75FM4JYcspmpP7cd/h0/5KqsMU2jcdBD+SAuBMmLqLu0N3/7t8NsfdwJjD3BBeKtT+qZWKew==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: '>=16'
-      react-dom: '>=16'
 
   verkit@0.4.1:
     resolution: {integrity: sha512-mMVzj0TXExtVdlDEq+Mzp0eyOuyznNpFobNM3uAqe3HVm/Ps2c+u17BligMkZjZCA6EiXpoon8iRTer3iu40SQ==}
@@ -3029,12 +3011,8 @@ snapshots:
 
   radix3@1.1.2: {}
 
-  react-dom@19.2.7(react@19.2.7):
-    dependencies:
-      react: 19.2.7
-      scheduler: 0.27.0
-
-  react@19.2.7: {}
+  react@19.2.7:
+    optional: true
 
   readdirp@5.1.1: {}
 
@@ -3095,8 +3073,6 @@ snapshots:
       '@bruits/satteri-win32-x64-msvc': 0.10.5
 
   sax@1.6.1: {}
-
-  scheduler@0.27.0: {}
 
   semver@7.8.5:
     optional: true
@@ -3265,11 +3241,6 @@ snapshots:
       node-fetch-native: 1.6.7
       ofetch: 1.5.1
       ufo: 1.6.4
-
-  use-scramble@2.2.15(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
-    dependencies:
-      react: 19.2.7
-      react-dom: 19.2.7(react@19.2.7)
 
   verkit@0.4.1: {}
 

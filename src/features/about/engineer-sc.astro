@@ -20,6 +20,40 @@
 // />
 ---
 
-<span class='font-chivo font-medium uppercase text-text relative isolate bg-background before:content-["▌"] before:absolute before:-top-1 before:left-0 before:mix-blend-difference before:text-[#ED01E4] hover:before:text-red-600 before:font-chivo before:pointer-events-none before:animate-block-char'>
+<span
+  id="fe-content"
+  class='font-chivo font-medium uppercase text-text relative isolate bg-background before:content-["▌"] before:absolute before:-top-1 before:left-0 before:mix-blend-difference before:text-[#ED01E4] hover:before:text-red-600 before:font-chivo before:pointer-events-none before:animate-block-char'
+  data-content="founding engineer"
+>
   founding engineer
 </span>
+
+<script>
+  import { createScramble } from "@/features/shared/utils/scramble";
+
+  const elId = "fe-content";
+  const el = document.getElementById(elId);
+
+  if (el) {
+    const scramble = createScramble(el, {
+      text: "founding engineer",
+      speed: 0.6,
+      tick: 1,
+      step: 1,
+      scramble: 25,
+      overdrive: false,
+    });
+
+    scramble.replay();
+
+    function handleReplay() {
+      scramble.replay();
+    }
+
+    el.addEventListener("mouseenter", handleReplay);
+    el.addEventListener("mouseleave", handleReplay);
+    el.addEventListener("focus", handleReplay);
+  } else {
+    console.log(`No element with id: ${elId}`);
+  }
+</script>
