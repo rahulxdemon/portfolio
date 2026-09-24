@@ -14,11 +14,16 @@ import PageInfo from "@/features/shared/components/page-info.astro";
           build things I care about.
         </p>
       </div>
-      <div>
-        <p>If you’d like a more detailed look, feel free to check my CV.</p>
+      <div class="font-semibold mb-1!">
+        <p class="text-primary w-max pr-2">
+          Where I've been{" "}
+          <span class="font-mono relative -top-1 animate-[arrow-bottom_4s_steps(5,end)_forwards_infinite]">
+            ↴
+          </span>
+        </p>
       </div>
       <div class="group/wrapper">
-        {WORK_EXPERIENCE.map((work, i) => (
+        {WORK_EXPERIENCE.map((work) => (
           <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
             <p class="text-sm">{work.company}</p>
             <div class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
@@ -27,6 +32,26 @@ import PageInfo from "@/features/shared/components/page-info.astro";
           </div>
         ))}
       </div>
+      <div>
+        <p>
+          For more detailed look, feel free to check my{" "}
+          <a class="social-link" href="/cv">
+            CV
+          </a>
+          .
+        </p>
+      </div>
     </div>
   </div>
 </PageContainer>
+
+<style>
+  @keyframes arrow-bottom {
+    0% {
+      top: -4px;
+    }
+    100% {
+      top: 8px;
+    }
+  }
+</style>

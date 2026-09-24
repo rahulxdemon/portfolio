@@ -12,7 +12,7 @@
   --color-background: var(--theme-background);
   --color-text: var(--theme-text);
 
-  --color-primary: var(--theme-primary);
+  --color-primary: hsl(var(--theme-primary));
 
   --color-background-helper: var(--theme-background-helper);
 
@@ -37,48 +37,6 @@
       filter: blur(0px);
     }
   }
-
-  /*@keyframes bg-pan-2 {
-    0% {
-      background-position: 5% 5%;
-    }
-    15% {
-      background-position: 50% 5%;
-    }
-    30% {
-      background-position: 5% 38%;
-    }
-    45% {
-      background-position: 50% 38%;
-    }
-    60% {
-      background-position: 80% 58%;
-    }
-    90% {
-      background-position: 5% 45%;
-    }
-    100% {
-      background-position: 5% 5%;
-    }
-  }*/
-
-  /*@keyframes bg-pan-3 {
-    0% {
-      background-position: 5% 5%;
-    }
-    25% {
-      background-position: 5% 100%;
-    }
-    50% {
-      background-position: 90% 5%;
-    }
-    75% {
-      background-position: 5% 100%;
-    }
-    100% {
-      background-position: 5% 5%;
-    }
-  }*/
 
   @keyframes bg-pan-4 {
     0% {
@@ -121,18 +79,6 @@
       background-position: 20% 2%;
     }
   }
-
-  /*@keyframes bg-ct-2 {
-    0% {
-      background-position: 20% 80%;
-    }
-    50% {
-      background-position: 40% 80%;
-    }
-    100% {
-      background-position: 95% 80%;
-    }
-  }*/
 
   @keyframes block-char {
     0% {
@@ -189,7 +135,7 @@
     /*--theme-background: #0625ee;
     --theme-text: #fff;*/
 
-    --theme-primary: #0625ee;
+    --theme-primary: 232 95% 48%;
 
     --theme-background-helper: #051ec2;
 
