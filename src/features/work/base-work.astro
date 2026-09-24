@@ -24,12 +24,23 @@ import PageInfo from "@/features/shared/components/page-info.astro";
       </div>
       <div class="group/wrapper">
         {WORK_EXPERIENCE.map((work) => (
-          <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
-            <p class="text-sm">{work.company}</p>
-            <div class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
-              {work.year}
+          <a
+            href={work.href}
+            data-to={work.href !== undefined}
+            class="text-inherit no-underline data-[to=false]:cursor-default"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
+              <p class="text-sm">
+                {work.company}
+                <!-- <span class="font-mono">↗</span> -->
+              </p>
+              <div class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
+                {work.year}
+              </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
       <div>

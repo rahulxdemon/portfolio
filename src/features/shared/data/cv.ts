@@ -7,6 +7,7 @@ interface Experience {
   date: string;
   year: string;
   description: string;
+  href?: string;
 }
 
 export const WORK_EXPERIENCE: Experience[] = [
@@ -17,6 +18,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     date: 'Jan 2026 - Present',
     year: '2026',
     description: 'Core frontend architecture for AI-agent-integrated educational technologies.',
+    href: 'https://nxtagent.ai',
   },
   {
     company: 'Vils',
@@ -25,6 +27,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     date: 'Feb 2025 - Present',
     year: '2025',
     description: 'AI-agent-driven edtech applications and behavioral intelligence platforms.',
+    href: 'https://vils.ai',
   },
   {
     company: 'Lidoku',
@@ -41,6 +44,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     date: 'May 2024 - Sep 2024',
     year: '2024',
     description: 'Internal enterprise tools and AI-powered human resource safeguards.',
+    href: 'https://www.linkedin.com/company/jet-metaphy-labs',
   },
   {
     company: 'Nxtjob',
@@ -49,6 +53,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     date: 'Apr 2023 - May 2023',
     year: '2023',
     description: 'Frontend interfaces for AI-agent-driven career growth platforms.',
+    href: 'https://nxtjob.ai',
   },
   {
     company: 'Klazigo',
@@ -57,5 +62,6 @@ export const WORK_EXPERIENCE: Experience[] = [
     date: 'May 2022 - Aug 2022',
     year: '2022',
     description: 'Frontend interfaces for AI-driven online health applications.',
+    href: 'https://linkedin.com/company/klazigo',
   },
 ];
