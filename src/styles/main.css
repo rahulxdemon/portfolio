@@ -21,6 +21,8 @@
 
   --spacing-mono: calc(var(--font-size) * var(--theme-line-height-base));
 
+  --cursor-pointer: url("/assets/cursor/c2.svg"), pointer;
+
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
@@ -165,6 +167,10 @@
     margin: 0;
   }
 
+  html {
+    cursor: url("/assets/cursor/c1.svg"), auto;
+  }
+
   body {
     @apply bg-background text-text font-jakarta;
     line-height: calc(var(--theme-line-height-base) * 1rem);
@@ -190,5 +196,10 @@
   }
   .social-link {
     @apply underline hover:decoration-wavy underline-offset-2 visited:text-inherit decoration-neutral-400 hover:decoration-neutral-800 text-inherit hover:text-neutral-800 transition-colors duration-300;
+  }
+
+  a,
+  .cursor-pointer {
+    cursor: var(--cursor-pointer);
   }
 }

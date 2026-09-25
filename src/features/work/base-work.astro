@@ -28,10 +28,7 @@ import PageInfo from "@/features/shared/components/page-info.astro";
 
           if (!hasHref) {
             return (
-              <span
-                class="text-inherit no-underline data-[href=false]:cursor-default"
-                data-href="false"
-              >
+              <span class="text-inherit no-underline" data-href="false">
                 <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
                   <p class="text-sm flex items-center justify-start gap-1">
                     {work.company}
@@ -48,7 +45,7 @@ import PageInfo from "@/features/shared/components/page-info.astro";
             <a
               href={work.href}
               data-href={"true"}
-              class="text-inherit no-underline data-[href=false]:cursor-default"
+              class="text-inherit no-underline"
               target="_blank"
               rel="noopener"
             >
