@@ -23,25 +23,55 @@ import PageInfo from "@/features/shared/components/page-info.astro";
         </p>
       </div>
       <div class="group/wrapper">
-        {WORK_EXPERIENCE.map((work) => (
-          <a
-            href={work.href}
-            data-to={work.href !== undefined}
-            class="text-inherit no-underline data-[to=false]:cursor-default"
-            target="_blank"
-            rel="noopener"
-          >
-            <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
-              <p class="text-sm">
-                {work.company}
-                <!-- <span class="font-mono">↗</span> -->
-              </p>
-              <div class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
-                {work.year}
+        {WORK_EXPERIENCE.map((work) => {
+          const hasHref = work.href !== undefined;
+
+          if (!hasHref) {
+            return (
+              <span
+                class="text-inherit no-underline data-[href=false]:cursor-default"
+                data-href="false"
+              >
+                <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
+                  <p class="text-sm flex items-center justify-start gap-1">
+                    {work.company}
+                  </p>
+                  <span class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
+                    {work.year}
+                  </span>
+                </div>
+              </span>
+            );
+          }
+
+          return (
+            <a
+              href={work.href}
+              data-href={"true"}
+              class="text-inherit no-underline data-[href=false]:cursor-default"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
+                <p class="text-sm flex items-center justify-start gap-1">
+                  {work.company}
+                  {hasHref && (
+                    <img
+                      class="-rotate-45 relative top-0.5 -translate-x-2 opacity-0 group-hover/item:translate-x-0 group-hover/item:opacity-100 duration-300"
+                      src="/assets/arr.webp"
+                      alt="arrow-right"
+                      width="12"
+                      height="12"
+                    />
+                  )}
+                </p>
+                <span class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
+                  {work.year}
+                </span>
               </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          );
+        })}
       </div>
       <div>
         <p>
