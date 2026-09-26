@@ -39,7 +39,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     date: 'Sep 2024 - Jan 2025',
     year: '2024',
     description: 'Cloud-hosted remote Linux environments for web-based learning platforms.',
-    sufix: '¤',
+    sufix: '≈',
   },
   {
     company: 'Jet Metaphy Labs',
@@ -69,6 +69,6 @@ export const WORK_EXPERIENCE: Experience[] = [
     year: '2022',
     description: 'Frontend interfaces for AI-driven online health applications.',
     href: 'https://linkedin.com/company/klazigo',
-    sufix: '◊',
+    sufix: 'Δ',
   },
 ];
