@@ -2,6 +2,7 @@
 import { WORK_EXPERIENCE } from "@/features/shared/data/cv";
 import PageContainer from "@/features/shared/components/page-container.astro";
 import PageInfo from "@/features/shared/components/page-info.astro";
+import WorkItemWrapper from "./work-item-wrapper.astro";
 ---
 
 <PageContainer>
@@ -26,31 +27,9 @@ import PageInfo from "@/features/shared/components/page-info.astro";
         {WORK_EXPERIENCE.map((work) => {
           const hasHref = work.href !== undefined;
 
-          if (!hasHref) {
-            return (
-              <span class="text-inherit no-underline" data-href="false">
-                <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] flex items-center justify-between gap-4 duration-300">
-                  <p class="text-sm flex items-center justify-start gap-1">
-                    {work.company}
-                    {work.sufix ? <span>{work.sufix}</span> : null}
-                  </p>
-                  <span class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
-                    {work.year}
-                  </span>
-                </div>
-              </span>
-            );
-          }
-
           return (
-            <a
-              href={work.href}
-              data-href={"true"}
-              class="text-inherit no-underline"
-              target="_blank"
-              rel="noopener"
-            >
-              <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity] py-2 group-hover/wrapper:not-hover:opacity-60 group-hover/wrapper:not-hover:blur-[1px] duration-300">
+            <WorkItemWrapper href={work.href}>
+              <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity,filter] py-2 group-hover/wrapper:not-hover:opacity-40 group-hover/wrapper:not-hover:blur-[1px] duration-300">
                 <div class="flex items-center justify-between gap-4">
                   <p class="text-sm flex items-center justify-start gap-1">
                     {work.company}
@@ -70,7 +49,7 @@ import PageInfo from "@/features/shared/components/page-info.astro";
                   </span>
                 </div>
               </div>
-            </a>
+            </WorkItemWrapper>
           );
         })}
       </div>

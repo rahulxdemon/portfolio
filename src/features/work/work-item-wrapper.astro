@@ -1,0 +1,18 @@
+---
+interface Props {
+  href?: string;
+}
+
+const { href } = Astro.props;
+const Element = href ? "a" : "span";
+---
+
+<Element
+  href={href}
+  target={href ? "_blank" : undefined}
+  rel={href ? "noopener noreferrer" : undefined}
+  data-href={Boolean(href).toString()}
+  class="text-inherit no-underline"
+>
+  <slot />
+</Element>
