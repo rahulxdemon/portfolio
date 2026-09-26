@@ -199,7 +199,7 @@
   }
 
   .page-init {
-    @apply animate-fade-in-up opacity-0 blur-md;
+    @apply animate-fade-in-up [animation-delay:100ms] opacity-0 blur-md;
   }
 
   a,
