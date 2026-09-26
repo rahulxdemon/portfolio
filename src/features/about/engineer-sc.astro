@@ -31,27 +31,29 @@
 <script>
   import { createScramble } from "@/features/shared/utils/scramble";
 
-  const elId = "fe-content";
-  const el = document.getElementById(elId);
+  document.addEventListener("astro:page-load", () => {
+    const elId = "fe-content";
+    const el = document.getElementById(elId);
 
-  if (el) {
-    const scramble = createScramble(el, {
-      text: "founding engineer",
-      speed: 0.6,
-      tick: 1,
-      step: 1,
-      scramble: 25,
-      overdrive: false,
-    });
+    if (el) {
+      const scramble = createScramble(el, {
+        text: "founding engineer",
+        speed: 0.6,
+        tick: 1,
+        step: 1,
+        scramble: 25,
+        overdrive: false,
+      });
 
-    function handleReplay() {
-      scramble.replay();
+      function handleReplay() {
+        scramble.replay();
+      }
+
+      el.addEventListener("mouseenter", handleReplay);
+      el.addEventListener("mouseleave", handleReplay);
+      el.addEventListener("focus", handleReplay);
+    } else {
+      console.log(`No element with id: ${elId}`);
     }
-
-    el.addEventListener("mouseenter", handleReplay);
-    el.addEventListener("mouseleave", handleReplay);
-    el.addEventListener("focus", handleReplay);
-  } else {
-    console.log(`No element with id: ${elId}`);
-  }
+  });
 </script>

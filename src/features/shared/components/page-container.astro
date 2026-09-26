@@ -1,9 +1,46 @@
-<main class="mx-6">
+---
+import type { TransitionAnimationPair, TransitionAnimationValue } from "astro";
+
+const anim: TransitionAnimationPair = {
+  old: {
+    name: "fade-in-up",
+    duration: "0.6s",
+    easing: "ease-in",
+    direction: "reverse",
+  },
+  new: {
+    name: "fade-in-up",
+    duration: "0.6s",
+    easing: "ease-in-out",
+  },
+};
+
+const customTransition: TransitionAnimationValue = {
+  forwards: anim,
+  backwards: anim,
+};
+---
+
+<main class="mx-6 page-init" transition:animate={customTransition}>
   <div class="max-w-158 mx-auto">
     <div class="pt-20 pb-30">
-      <div class="animate-fade-in-up [animation-delay:100ms] opacity-0 blur-md">
+      <div>
         <slot />
       </div>
     </div>
   </div>
 </main>
+
+<script>
+  const animClass = "page-init";
+  document.addEventListener("astro:after-swap", () => {
+    const el = document.querySelector("main");
+    if (el) {
+      if (el.classList.contains(animClass)) {
+        el.classList.remove(animClass);
+      }
+    } else {
+      console.log("No main element");
+    }
+  });
+</script>

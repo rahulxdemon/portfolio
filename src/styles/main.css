@@ -30,8 +30,8 @@
   @keyframes fade-in-up {
     0% {
       opacity: 0;
-      transform: translateY(10px);
-      filter: blur(12px);
+      transform: translateY(15px);
+      filter: blur(8px);
     }
     100% {
       opacity: 1;
@@ -196,6 +196,10 @@
   }
   .social-link {
     @apply underline hover:decoration-wavy underline-offset-2 visited:text-inherit decoration-neutral-400 hover:decoration-neutral-800 text-inherit hover:text-neutral-800 transition-colors duration-300;
+  }
+
+  .page-init {
+    @apply animate-fade-in-up [animation-delay:100ms] opacity-0 blur-md;
   }
 
   a,
