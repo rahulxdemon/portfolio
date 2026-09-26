@@ -21,7 +21,7 @@ export const SITE: ISite = {
   og: {
     image: {
       url: {
-        light: 'https://rahulgg.in/assets/og/og.svg',
+        light: 'https://rahulgg.in/assets/og/og.webp',
         dark: 'https://rahulgg.in/assets/og/og-dark.svg',
       },
       alt: 'Rahul Palamarthi',
