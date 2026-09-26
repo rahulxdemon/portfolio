@@ -54,17 +54,17 @@ import PageInfo from "@/features/shared/components/page-info.astro";
                 <p class="text-sm flex items-center justify-start gap-1">
                   {work.company}
                   {work.sufix ? <span>{work.sufix}</span> : null}
+                </p>
+                <span class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
                   {hasHref && (
                     <img
-                      class="rotate-15 relative top-0.5 -translate-x-1 opacity-0 group-hover/item:translate-x-4 group-hover/item:opacity-100 duration-300"
+                      class="rotate-15 relative top-0.5 -translate-x-10 opacity-0 group-hover/item:-translate-x-4 group-hover/item:opacity-100 duration-300"
                       src="/assets/arr-2.svg"
                       alt="arrow-right"
                       width="12"
                       height="12"
                     />
                   )}
-                </p>
-                <span class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
                   {work.year}
                 </span>
               </div>
