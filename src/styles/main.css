@@ -198,6 +198,10 @@
     @apply underline hover:decoration-wavy underline-offset-2 visited:text-inherit decoration-neutral-400 hover:decoration-neutral-800 text-inherit hover:text-neutral-800 transition-colors duration-300;
   }
 
+  .page-init {
+    @apply animate-fade-in-up opacity-0 blur-md;
+  }
+
   a,
   .cursor-pointer {
     cursor: var(--cursor-pointer);
