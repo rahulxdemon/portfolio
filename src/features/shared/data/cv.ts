@@ -8,6 +8,7 @@ interface Experience {
   year: string;
   description: string;
   href?: string;
+  sufix?: string;
 }
 
 export const WORK_EXPERIENCE: Experience[] = [
@@ -19,6 +20,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     year: '2026',
     description: 'Core frontend architecture for AI-agent-integrated educational technologies.',
     href: 'https://nxtagent.ai',
+    sufix: '✦',
   },
   {
     company: 'Vils',
@@ -28,6 +30,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     year: '2025',
     description: 'AI-agent-driven edtech applications and behavioral intelligence platforms.',
     href: 'https://vils.ai',
+    sufix: '✦',
   },
   {
     company: 'Lidoku',
@@ -36,6 +39,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     date: 'Sep 2024 - Jan 2025',
     year: '2024',
     description: 'Cloud-hosted remote Linux environments for web-based learning platforms.',
+    sufix: '¤',
   },
   {
     company: 'Jet Metaphy Labs',
@@ -45,6 +49,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     year: '2024',
     description: 'Internal enterprise tools and AI-powered human resource safeguards.',
     href: 'https://www.linkedin.com/company/jet-metaphy-labs',
+    sufix: '✦',
   },
   {
     company: 'Nxtjob',
@@ -54,6 +59,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     year: '2023',
     description: 'Frontend interfaces for AI-agent-driven career growth platforms.',
     href: 'https://nxtjob.ai',
+    sufix: '✦',
   },
   {
     company: 'Klazigo',
@@ -63,5 +69,6 @@ export const WORK_EXPERIENCE: Experience[] = [
     year: '2022',
     description: 'Frontend interfaces for AI-driven online health applications.',
     href: 'https://linkedin.com/company/klazigo',
+    sufix: '◊',
   },
 ];
