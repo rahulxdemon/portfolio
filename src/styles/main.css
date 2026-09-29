@@ -121,10 +121,32 @@
     }
   }
 
+  @keyframes work-heading {
+    0% {
+      transform: scaleX(1);
+    }
+    49.99% {
+      background-color: var(--color-fuchsia-300);
+    }
+    50% {
+      transform: scaleX(0);
+      background-color: --alpha(var(--color-cyan-200) / 50%);
+      z-index: -20;
+      height: 45%;
+    }
+    100% {
+      transform: scaleX(1);
+      background-color: --alpha(var(--color-cyan-200) / 50%);
+      z-index: -20;
+      height: 45%;
+    }
+  }
+
   /* Define the animation utility name */
   --animate-fade-in-up: fade-in-up 0.6s ease-in forwards;
   --animate-block-char: block-char 10s steps(34, end) forwards infinite;
   --animate-text-cycle: text-cycle 2.5s infinite linear;
+  --animate-work-heading: work-heading 0.6s 0.7s ease-in-out forwards;
 }
 
 @layer base {
