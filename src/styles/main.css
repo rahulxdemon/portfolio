@@ -19,6 +19,8 @@
   --color-secondary-background: var(--theme-secondary-background);
   --color-secondary-text: var(--theme-secondary-text);
 
+  --color-selection: hsl(var(--theme-selection));
+
   --spacing-mono: calc(var(--font-size) * var(--theme-line-height-base));
 
   --cursor-pointer: url("/assets/cursor/c2.svg"), pointer;
@@ -144,6 +146,9 @@
     --theme-secondary-background: #ffe51c;
     --theme-secondary-text: #241f21;
 
+    /*--theme-selection: 53 85% 95%;*/
+    --theme-selection: 295 85% 95%;
+
     /*--theme-background: #0100fe;
     --theme-text: #fff;*/
 
@@ -169,6 +174,10 @@
 
   html {
     cursor: url("/assets/cursor/c1.svg"), auto;
+  }
+
+  html::selection {
+    @apply text-text bg-selection;
   }
 
   body {
