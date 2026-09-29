@@ -6,16 +6,16 @@ import WorkItemWrapper from "./work-item-wrapper.astro";
 ---
 
 <PageContainer>
-  <div class="space-y-8">
-    <PageInfo content="Work" />
+  <div class="space-y-8 work-page">
+    <PageInfo content="Work" className="hover-blur" />
     <div class="text-neutral-600 font-medium text-sm space-y-4 leading-6.5">
-      <div>
+      <div class="hover-blur">
         <p>
           Over the years, I've had the chance to work with a few great teams and
           build things I care about.
         </p>
       </div>
-      <div class="font-semibold mb-1!">
+      <div class="font-semibold mb-1! hover-blur">
         <p class="text-cyan-500 w-max pr-0.5 relative isolate before:absolute before:bg-fuchsia-300 before:inset-x-0 before:-rotate-1 before:bottom-0 before:h-[55%] before:z-20 before:animate-work-heading before:origin-left">
           Where I've been{" "}
           <span class="font-mono relative -top-1 animate-[arrow-bottom_4s_steps(5,end)_forwards_infinite]">
@@ -23,22 +23,22 @@ import WorkItemWrapper from "./work-item-wrapper.astro";
           </span>
         </p>
       </div>
-      <div class="group/wrapper">
+      <div class="group/wi-wrapper">
         {WORK_EXPERIENCE.map((work) => {
           const hasHref = work.href !== undefined;
 
           return (
             <WorkItemWrapper href={work.href}>
-              <div class="group/item hover:px-2 hover:text-text transition-[padding,opacity,filter] py-2 group-hover/wrapper:not-hover:opacity-40 group-hover/wrapper:not-hover:blur-[1px] duration-300">
+              <div class="group/w-item hover:px-2 hover:text-text py-2">
                 <div class="flex items-center justify-between gap-4">
                   <p class="text-sm flex items-center justify-start gap-1">
                     {work.company}
                     {work.sufix ? <span>{work.sufix}</span> : null}
                   </p>
-                  <span class="text-xs font-medium text-neutral-400 group-hover/item:text-neutral-600 transition-colors duration-300">
+                  <span class="text-xs font-medium text-neutral-400 group-hover/w-item:text-neutral-600 transition-colors duration-300">
                     {hasHref && (
                       <img
-                        class="rotate-15 relative top-0.5 -translate-x-10 opacity-0 group-hover/item:-translate-x-4 group-hover/item:opacity-100 duration-300"
+                        class="rotate-15 relative top-0.5 -translate-x-10 opacity-0 group-hover/w-item:-translate-x-4 group-hover/w-item:opacity-100 duration-300"
                         src="/assets/arr-2.svg"
                         alt="arrow-right"
                         width="12"
@@ -53,7 +53,7 @@ import WorkItemWrapper from "./work-item-wrapper.astro";
           );
         })}
       </div>
-      <div>
+      <div class="hover-blur">
         <p>
           For more detailed look, feel free to check my{" "}
           <a class="social-link" href="/cv">
