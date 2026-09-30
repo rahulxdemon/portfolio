@@ -242,6 +242,7 @@
 :is(.hover-blur p, .group\/w-item) {
   transition: filter, opacity, padding;
   transition-duration: 300ms;
+  transition-timing-function: ease-out;
 }
 
 .work-page:has(.group\/wi-wrapper:hover) :is(.hover-blur p, .group\/w-item:not(:hover)) {
