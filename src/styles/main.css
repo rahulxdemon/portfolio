@@ -279,15 +279,15 @@
 }
 
 .social-wrapper:has(.g-link:is(:hover, :focus)) .glike:nth-of-type(4) {
-  rotate: -10deg;
+  rotate: 10deg;
 }
 
 .social-wrapper:has(.g-link:is(:hover, :focus)) .glike:nth-of-type(5) {
-  rotate: 15deg;
+  rotate: -25deg;
 }
 
 .social-wrapper:has(.g-link:is(:hover, :focus)) .glike:nth-of-type(6) {
-  rotate: -30deg;
+  rotate: 20deg;
 }
 
 /* Linkedin */
@@ -297,13 +297,13 @@
 }
 
 .social-wrapper:has(.l-link:is(:hover, :focus)) .llike:nth-of-type(7) {
-  rotate: -10deg;
+  rotate: 8deg;
 }
 
 .social-wrapper:has(.l-link:is(:hover, :focus)) .llike:nth-of-type(8) {
-  rotate: 15deg;
+  rotate: -17deg;
 }
 
 .social-wrapper:has(.l-link:is(:hover, :focus)) .llike:nth-of-type(9) {
-  rotate: -30deg;
+  rotate: 35deg;
 }
