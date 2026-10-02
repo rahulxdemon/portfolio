@@ -235,6 +235,10 @@
     @apply animate-fade-in-up [animation-delay:100ms] opacity-0 blur-md;
   }
 
+  .like-emj {
+    @apply transition-[opacity,rotate,scale] duration-300 ease-in opacity-0 select-none scale-0 rotate-0;
+  }
+
   a,
   .cursor-pointer {
     cursor: var(--cursor-pointer);
@@ -250,10 +254,6 @@
 .work-page:has(.group\/wi-wrapper:hover) :is(.hover-blur p, .group\/w-item:not(:hover)) {
   filter: blur(2.7px);
   opacity: 0.4;
-}
-
-.like-emj {
-  @apply transition-[opacity,rotate,scale] duration-300 ease-in opacity-0 select-none scale-0 rotate-0;
 }
 
 /* Twitter/x */
