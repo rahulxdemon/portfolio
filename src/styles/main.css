@@ -249,3 +249,58 @@
   filter: blur(2.7px);
   opacity: 0.4;
 }
+
+.like-emj {
+  @apply transition-[opacity,rotate] duration-300 ease-in;
+}
+
+/* Twitter/x */
+.social-wrapper:has(.t-link:hover) .tlike {
+  opacity: 100;
+}
+
+.social-wrapper:has(.t-link:hover) .tlike:nth-of-type(1) {
+  rotate: -10deg;
+}
+
+.social-wrapper:has(.t-link:hover) .tlike:nth-of-type(2) {
+  rotate: 15deg;
+}
+
+.social-wrapper:has(.t-link:hover) .tlike:nth-of-type(3) {
+  rotate: -30deg;
+}
+
+/* GitHub */
+.social-wrapper:has(.g-link:hover) .glike {
+  opacity: 100;
+}
+
+.social-wrapper:has(.g-link:hover) .glike:nth-of-type(4) {
+  rotate: -10deg;
+}
+
+.social-wrapper:has(.g-link:hover) .glike:nth-of-type(5) {
+  rotate: 15deg;
+}
+
+.social-wrapper:has(.g-link:hover) .glike:nth-of-type(6) {
+  rotate: -30deg;
+}
+
+/* Linkedin */
+.social-wrapper:has(.l-link:hover) .llike {
+  opacity: 100;
+}
+
+.social-wrapper:has(.l-link:hover) .llike:nth-of-type(7) {
+  rotate: -10deg;
+}
+
+.social-wrapper:has(.l-link:hover) .llike:nth-of-type(8) {
+  rotate: 15deg;
+}
+
+.social-wrapper:has(.l-link:hover) .llike:nth-of-type(9) {
+  rotate: -30deg;
+}

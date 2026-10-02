@@ -6,14 +6,10 @@ import PageContainer from "@/features/shared/components/page-container.astro";
 import EngineerSC from "./engineer-sc.astro";
 import DesignEngineer from "./design-engineer.astro";
 import Infra from "./infra.astro";
-import {
-  GITHUB_SOCIAL,
-  TWITTER_SOCIAL,
-  LINKEDIN_SOCIAL,
-} from "@/features/social/data";
 import { Image } from "astro:assets";
 
 import "drawably/style.css";
+import Social from "./social.astro";
 ---
 
 <PageContainer>
@@ -52,36 +48,7 @@ import "drawably/style.css";
         early-stage products at the center of everything I do - from shaping the
         vision to shipping the details that make it real.
       </p>
-      <p>
-        Liked what you found? I'm on{" "}
-        <a
-          class="social-link"
-          href={TWITTER_SOCIAL.href}
-          target="_blank"
-          rel="noopener"
-        >
-          {TWITTER_SOCIAL.label}
-        </a>
-        ,{" "}
-        <a
-          class="social-link"
-          href={GITHUB_SOCIAL.href}
-          target="_blank"
-          rel="noopener"
-        >
-          {GITHUB_SOCIAL.label}
-        </a>
-        , and{" "}
-        <a
-          class="social-link"
-          href={LINKEDIN_SOCIAL.href}
-          target="_blank"
-          rel="noopener"
-        >
-          {LINKEDIN_SOCIAL.label}
-        </a>
-        .
-      </p>
+      <Social />
     </div>
   </div>
 </PageContainer>
