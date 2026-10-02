@@ -1,0 +1,107 @@
+<span class="infra-content-wrapper relative">
+  <span id="infra-content" class="font-jakarta!">
+    infrastructure
+  </span>
+  <svg
+    id="infra-bar"
+    xmlns="http://www.w3.org/2000/svg"
+    class="absolute w-full left-0 -bottom-0.5"
+    aria-hidden="true"
+  ></svg>
+</span>
+
+<style>
+  .infra-content-wrapper rect {
+    transition: fill 120ms ease;
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const BLOCK = 2;
+    const GAP = 2;
+    const SPEED = 150;
+    const PALETTE = [
+      "var(--color-mauve-600)",
+      "var(--color-olive-600)",
+      "var(--color-mist-600)",
+      "var(--color-taupe-600)",
+      "var(--color-red-600)",
+      "var(--color-orange-600)",
+      "var(--color-amber-600)",
+      "var(--color-lime-600)",
+      "var(--color-green-600)",
+      "var(--color-emerald-600)",
+      "var(--color-teal-600)",
+      "var(--color-cyan-600)",
+      "var(--color-sky-600)",
+      "var(--color-blue-600)",
+      "var(--color-indigo-600)",
+      "var(--color-violet-600)",
+      "var(--color-purple-600)",
+      "var(--color-fuchsia-600)",
+      "var(--color-pink-600)",
+      "var(--color-rose-600)",
+    ]; // first ten are vivid, last five are neutral grays
+
+    const elId = "infra-content";
+    const svgId = "infra-bar";
+    const word = document.getElementById(elId);
+    const svg = document.getElementById(svgId);
+
+    const NS = "http://www.w3.org/2000/svg";
+    let rects: SVGElement[] = [];
+    let count = 0;
+    let timer: NodeJS.Timeout;
+
+    function build() {
+      if (word && svg) {
+        const width = word.getBoundingClientRect().width;
+        count = Math.ceil((width + GAP) / (BLOCK + GAP)); // how many blocks fit
+        const used = count * BLOCK + (count - 1) * GAP; // exact bar width
+        svg.setAttribute("width", used.toString());
+        svg.setAttribute("height", BLOCK.toString());
+        svg.setAttribute("viewBox", `0 0 ${used} ${BLOCK}`);
+        // svg.style.marginLeft = (width - used) / 2 + "px"; // centre under the word
+        svg.innerHTML = "";
+        rects = [];
+        for (let i = 0; i < count; i++) {
+          const r = document.createElementNS(NS, "rect");
+          r.setAttribute("x", (i * (BLOCK + GAP)).toString());
+          r.setAttribute("width", BLOCK.toString());
+          r.setAttribute("height", BLOCK.toString());
+          r.setAttribute("fill", "#000");
+          svg.appendChild(r);
+          rects.push(r);
+        }
+      } else {
+        console.log(`No element with id: ${elId} or ${svgId}`);
+      }
+    }
+
+    // Give every block a new random colour (never the same as its current one)
+    function shuffle() {
+      rects.forEach((r) => {
+        const cur = r.getAttribute("fill");
+        let c;
+        do {
+          c = PALETTE[Math.floor(Math.random() * PALETTE.length)];
+        } while (c === cur);
+        r.setAttribute("fill", c);
+      });
+    }
+
+    function start() {
+      clearInterval(timer);
+      build();
+      shuffle();
+      timer = setInterval(shuffle, SPEED);
+    }
+
+    (document.fonts && document.fonts.ready
+      ? document.fonts.ready
+      : Promise.resolve()
+    ).then(start);
+    window.addEventListener("resize", start);
+  });
+</script>
