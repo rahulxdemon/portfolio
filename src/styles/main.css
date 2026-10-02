@@ -251,56 +251,59 @@
 }
 
 .like-emj {
-  @apply transition-[opacity,rotate] duration-300 ease-in;
+  @apply transition-[opacity,rotate,scale] duration-300 ease-in opacity-0 select-none scale-0 rotate-0;
 }
 
 /* Twitter/x */
-.social-wrapper:has(.t-link:hover) .tlike {
+.social-wrapper:has(.t-link:is(:hover, :focus)) .tlike {
   opacity: 100;
+  scale: 1;
 }
 
-.social-wrapper:has(.t-link:hover) .tlike:nth-of-type(1) {
+.social-wrapper:has(.t-link:is(:hover, :focus)) .tlike:nth-of-type(1) {
   rotate: -10deg;
 }
 
-.social-wrapper:has(.t-link:hover) .tlike:nth-of-type(2) {
+.social-wrapper:has(.t-link:is(:hover, :focus)) .tlike:nth-of-type(2) {
   rotate: 15deg;
 }
 
-.social-wrapper:has(.t-link:hover) .tlike:nth-of-type(3) {
+.social-wrapper:has(.t-link:is(:hover, :focus)) .tlike:nth-of-type(3) {
   rotate: -30deg;
 }
 
 /* GitHub */
-.social-wrapper:has(.g-link:hover) .glike {
+.social-wrapper:has(.g-link:is(:hover, :focus)) .glike {
   opacity: 100;
+  scale: 1;
 }
 
-.social-wrapper:has(.g-link:hover) .glike:nth-of-type(4) {
+.social-wrapper:has(.g-link:is(:hover, :focus)) .glike:nth-of-type(4) {
   rotate: -10deg;
 }
 
-.social-wrapper:has(.g-link:hover) .glike:nth-of-type(5) {
+.social-wrapper:has(.g-link:is(:hover, :focus)) .glike:nth-of-type(5) {
   rotate: 15deg;
 }
 
-.social-wrapper:has(.g-link:hover) .glike:nth-of-type(6) {
+.social-wrapper:has(.g-link:is(:hover, :focus)) .glike:nth-of-type(6) {
   rotate: -30deg;
 }
 
 /* Linkedin */
-.social-wrapper:has(.l-link:hover) .llike {
+.social-wrapper:has(.l-link:is(:hover, :focus)) .llike {
   opacity: 100;
+  scale: 1;
 }
 
-.social-wrapper:has(.l-link:hover) .llike:nth-of-type(7) {
+.social-wrapper:has(.l-link:is(:hover, :focus)) .llike:nth-of-type(7) {
   rotate: -10deg;
 }
 
-.social-wrapper:has(.l-link:hover) .llike:nth-of-type(8) {
+.social-wrapper:has(.l-link:is(:hover, :focus)) .llike:nth-of-type(8) {
   rotate: 15deg;
 }
 
-.social-wrapper:has(.l-link:hover) .llike:nth-of-type(9) {
+.social-wrapper:has(.l-link:is(:hover, :focus)) .llike:nth-of-type(9) {
   rotate: -30deg;
 }
