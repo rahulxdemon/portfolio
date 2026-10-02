@@ -307,5 +307,5 @@
 }
 
 .social-wrapper:has(.l-link:is(:hover, :focus)) .llike:nth-of-type(9) {
-  rotate: 35deg;
+  rotate: 27deg;
 }
