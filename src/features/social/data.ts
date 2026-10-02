@@ -8,7 +8,7 @@ export const GITHUB_SOCIAL: TSocial = {
 
 export const TWITTER_SOCIAL: TSocial = {
   id: 'twitter',
-  label: 'X',
+  label: 'twitter/X',
   href: 'https://x.com/rahul_hx',
 };
 
