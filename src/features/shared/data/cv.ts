@@ -8,7 +8,7 @@ interface Experience {
   year: string;
   description: string;
   href?: string;
-  sufix?: string;
+  sufix: string;
 }
 
 export const WORK_EXPERIENCE: Experience[] = [
