@@ -1,0 +1,30 @@
+---
+import { SOCIAL } from "@/features/social/data";
+---
+
+<section>
+  <div class="pb-2">
+    <h1 class="text-base font-normal font-baskerville text-mauve-700">
+      Social
+    </h1>
+  </div>
+  <div class="pl-4 font-medium">
+    {SOCIAL.map((val) => {
+      return (
+        <div>
+          <a
+            href={val.href}
+            class="group/social-link hover:text-mauve-900 transition-colors duration-300 text-sm font-jakarta text-inherit no-underline inline-block py-1.5"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="inline-block text-xs group-hover/social-link:rotate-180 group-hover/social-link:translate-x-1 group-focus/social-link:rotate-180 group-focus/social-link:translate-x-1 leading-2.75 transition-transform duration-300 ease-out origin-center">
+              ✽
+            </span>{" "}
+            <span class="inline-block pl-2">{val.label}</span>
+          </a>
+        </div>
+      );
+    })}
+  </div>
+</section>

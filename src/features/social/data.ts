@@ -8,7 +8,7 @@ export const GITHUB_SOCIAL: TSocial = {
 
 export const TWITTER_SOCIAL: TSocial = {
   id: 'twitter',
-  label: 'twitter/X',
+  label: 'X (twitter)',
   href: 'https://x.com/rahul_hx',
 };
 
@@ -17,3 +17,11 @@ export const LINKEDIN_SOCIAL: TSocial = {
   label: 'LinkedIn',
   href: 'https://www.linkedin.com/in/rahul-palamarthi',
 };
+
+export const EMAIL_SOCIAL: TSocial = {
+  id: 'email',
+  label: 'Email',
+  href: 'https://mail.google.com/mail/u/0/?fs=1&to=rahulpalamarthi@gmail.com&su=Hello+from+your+portfolio&body=Hi&tf=cm',
+};
+
+export const SOCIAL: TSocial[] = [TWITTER_SOCIAL, EMAIL_SOCIAL, GITHUB_SOCIAL, LINKEDIN_SOCIAL];

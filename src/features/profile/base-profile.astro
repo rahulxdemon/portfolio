@@ -1,6 +1,7 @@
 ---
 import PageContainer from "@/features/shared/components/page-container.astro";
 import PageInfo from "@/features/shared/components/page-info.astro";
+import Social from "./social.astro";
 ---
 
 <PageContainer>
@@ -13,8 +14,11 @@ import PageInfo from "@/features/shared/components/page-info.astro";
         alt="banner"
       />
     </div>
-    <div class="space-y-4 font-medium leading-6.5 text-sm">
-      <p>Coming soon</p>
+    <div class="text-mauve-600 space-y-12">
+      <div class="font-medium leading-6.5 text-sm">
+        <p>Coming soon</p>
+      </div>
+      <Social />
     </div>
   </div>
 </PageContainer>
