@@ -2,6 +2,7 @@
 import PageContainer from "@/features/shared/components/page-container.astro";
 import PageInfo from "@/features/shared/components/page-info.astro";
 import Social from "./social.astro";
+import { OtherData } from "./other-data";
 ---
 
 <PageContainer>
@@ -19,6 +20,7 @@ import Social from "./social.astro";
         <p>Coming soon</p>
       </div>
       <Social />
+      <OtherData client:load />
     </div>
   </div>
 </PageContainer>

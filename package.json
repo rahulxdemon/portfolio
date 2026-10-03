@@ -16,9 +16,11 @@
     "check:fix": "biome check --write ./src"
   },
   "dependencies": {
+    "@astrojs/preact": "^6.0.5",
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.3.3",
-    "drawably": "^0.4.2"
+    "drawably": "^0.4.2",
+    "preact": "^10.29.8"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.1",

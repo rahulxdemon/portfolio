@@ -3,6 +3,8 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, fontProviders } from 'astro/config';
 import { SITE } from '@/features/shared/data/site';
 
+import preact from '@astrojs/preact';
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -39,5 +41,5 @@ export default defineConfig({
     port: 3000,
   },
 
-  integrations: [sitemap()],
+  integrations: [sitemap(), preact()],
 });
