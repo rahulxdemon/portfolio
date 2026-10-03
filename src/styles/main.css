@@ -246,7 +246,7 @@
 }
 
 :is(.hover-blur p, .group\/w-item) {
-  transition: filter, opacity, padding;
+  transition: filter, opacity, padding, color;
   transition-duration: 300ms;
   transition-timing-function: ease-out;
 }
