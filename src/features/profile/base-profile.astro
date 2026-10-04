@@ -2,22 +2,23 @@
 import PageContainer from "@/features/shared/components/page-container.astro";
 import PageInfo from "@/features/shared/components/page-info.astro";
 import Social from "./social.astro";
+import About from "./about.astro";
 ---
 
 <PageContainer>
-  <div class="space-y-8">
-    <PageInfo content="Profile" />
-    <div>
-      <img
-        class="w-full inline-block"
-        src="/assets/profile/ascii-magic-12.jpg"
-        alt="banner"
-      />
-    </div>
-    <div class="text-mauve-600 space-y-12">
-      <div class="font-medium leading-6.5 text-sm">
-        <p>Coming soon</p>
+  <div class="space-y-10">
+    <div class="space-y-8">
+      <PageInfo content="Profile" />
+      <div>
+        <img
+          class="w-full inline-block"
+          src="/assets/profile/ascii-magic-12.jpg"
+          alt="banner"
+        />
       </div>
+    </div>
+    <div class="text-mauve-600 space-y-10">
+      <About />
       <Social />
     </div>
   </div>

@@ -1,20 +1,17 @@
 ---
 import { SOCIAL } from "@/features/social/data";
+import Heading from "./heading.astro";
 ---
 
 <section>
-  <div class="pb-2">
-    <h1 class="text-base font-normal font-baskerville text-mauve-700">
-      Social
-    </h1>
-  </div>
-  <div class="pl-4 font-medium">
+  <Heading heading="Social" />
+  <div class="pl-4 font-medium text-sm">
     {SOCIAL.map((val) => {
       return (
         <div>
           <a
             href={val.href}
-            class="group/social-link hover:text-mauve-900 transition-colors duration-300 text-sm font-jakarta text-inherit no-underline inline-block py-1.5"
+            class="group/social-link hover:text-mauve-900 transition-colors duration-300 font-jakarta text-inherit no-underline inline-block py-1.5"
             target="_blank"
             rel="noopener"
           >
