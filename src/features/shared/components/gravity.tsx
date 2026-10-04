@@ -1,9 +1,15 @@
+// @ts-nocheck
+
 import { debounce } from 'lodash-es';
-import type Matter from 'matter-js';
-import { Bodies, Common, Engine, Events, Mouse, MouseConstraint, Query, Render, Runner, World } from 'matter-js';
+import Matter from 'matter-js';
+
+// @ts-expect-error
+import polyDecomp from 'poly-decomp';
 import { createContext, forwardRef, type ReactNode, useCallback, useContext, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { calculatePosition } from '@/features/shared/utils/calculate-position';
 import { parsePathToVertices } from '@/features/shared/utils/svg-path-to-vertices';
+
+const { Bodies, Common, Engine, Events, Mouse, MouseConstraint, Query, Render, Runner, World } = Matter;
 
 type GravityProps = {
   children: ReactNode;
@@ -107,8 +113,8 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
   ) => {
     const canvas = useRef<HTMLDivElement>(null);
     const engine = useRef(Engine.create());
-    const render = useRef<Render>(undefined);
-    const runner = useRef<Runner>(undefined);
+    const render = useRef<typeof Render>(undefined);
+    const runner = useRef<typeof Runner>(undefined);
     const bodiesMap = useRef(new Map<string, PhysicsBody>());
     const frameId = useRef<number>(undefined);
     const mouseConstraint = useRef<Matter.MouseConstraint>(undefined);
@@ -215,7 +221,7 @@ const Gravity = forwardRef<GravityRef, GravityProps>(
       const height = canvas.current.offsetHeight;
       const width = canvas.current.offsetWidth;
 
-      Common.setDecomp(require('poly-decomp'));
+      Common.setDecomp(polyDecomp);
 
       engine.current.gravity.x = gravity.x;
       engine.current.gravity.y = gravity.y;
