@@ -2,7 +2,7 @@
 import PageContainer from "@/features/shared/components/page-container.astro";
 import PageInfo from "@/features/shared/components/page-info.astro";
 import Social from "./social.astro";
-import { OtherData } from "./other-data";
+import { Preview } from "./gravity-demo";
 ---
 
 <PageContainer>
@@ -20,7 +20,7 @@ import { OtherData } from "./other-data";
         <p>Coming soon</p>
       </div>
       <Social />
-      <OtherData client:load />
+      <Preview client:load />
     </div>
   </div>
 </PageContainer>

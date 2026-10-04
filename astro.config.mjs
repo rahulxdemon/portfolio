@@ -1,9 +1,8 @@
+import preact from '@astrojs/preact';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, fontProviders } from 'astro/config';
 import { SITE } from '@/features/shared/data/site';
-
-import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
