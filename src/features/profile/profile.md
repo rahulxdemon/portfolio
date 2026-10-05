@@ -8,7 +8,7 @@ Current working as a founding engineer at nxtagent.ai, architecturing frontend s
 
 ## Work
 
-Over the past years, I’ve worked in startups and built applications from zero to 1.
+Over the past years, I've worked in startups and built applications from zero to 1.
 
 Over the years, I've had the chance to work with a few great teams and build things I care about.
 
