@@ -1,0 +1,33 @@
+---
+import { WORK_EXPERIENCE } from "../shared/data/cv";
+import WorkItemWrapper from "../work/work-item-wrapper.astro";
+import Heading from "./heading.astro";
+---
+
+<div>
+  <Heading heading="Work" />
+  <div class="font-medium pl-4 text-sm space-y-4 leading-6.5">
+    <p>
+      Over the past years, I’ve worked in startups with great teams and built
+      things I care about from zero to one.
+    </p>
+
+    <div class="group/wi-wrapper">
+      {WORK_EXPERIENCE.map((work) => {
+        return (
+          <WorkItemWrapper href={work.href}>
+            <div class="flex items-center justify-start gap-2">
+              <span class="inline-block group-hover/w-item:rotate-180 group-hover/w-item:translate-x-1 group-focus/w-item:rotate-180 group-focus/w-item:translate-x-1 leading-3 transition-transform duration-300 ease-out origin-[50%_55%]">
+                {work.sufix}
+              </span>{" "}
+              <p class="text-sm">{work.company}</p>
+              <span class="text-xs ml-auto font-medium text-mauve-400 group-hover/w-item:text-mauve-600 transition-colors duration-300">
+                {work.year}
+              </span>
+            </div>
+          </WorkItemWrapper>
+        );
+      })}
+    </div>
+  </div>
+</div>
