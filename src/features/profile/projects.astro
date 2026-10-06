@@ -1,0 +1,38 @@
+---
+import { PROJECTS } from "@/features/portfolio/data";
+import Heading from "./heading.astro";
+---
+
+<section class="hover-blur">
+  <Heading heading="Projects" />
+  <div class="font-medium pl-4 text-sm space-y-4 leading-6.5">
+    <p>
+      A few things I've designed and built on the side, the kind of projects an
+      obsessed engineer ends up making anyway.
+    </p>
+
+    <div>
+      {PROJECTS.map((project) => {
+        return (
+          <a
+            href={project.href}
+            class="group/w-item hoverable-wrapper py-2 text-inherit inline-block w-full no-underline hover:text-mauve-900 hover:pr-4 focus:text-mauve-900 focus:pr-4"
+            target={"_blank"}
+            rel="noopener noreferrer"
+            data-href={Boolean(project.href).toString()}
+          >
+            <div class="flex items-center justify-start gap-2">
+              <span class="inline-block group-hover/w-item:rotate-180 group-hover/w-item:translate-x-1 group-focus/w-item:rotate-180 group-focus/w-item:translate-x-1 leading-3 transition-transform duration-300 ease-out origin-[50%_58%]">
+                ❊
+              </span>{" "}
+              <p class="text-sm">{project.name}</p>
+              <span class="text-xs ml-auto font-medium text-mauve-400 group-hover/w-item:text-mauve-600 transition-colors duration-300">
+                {project.year}
+              </span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

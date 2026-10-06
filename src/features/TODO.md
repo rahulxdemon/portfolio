@@ -6,7 +6,6 @@
 - Show content "Yet an other AI company"
 
 - Add cursor effect to links
-- Blur remaining elements on hovering work or social sections
 - Add projects section
 
 ## Future
