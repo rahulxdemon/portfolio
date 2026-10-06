@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   src: string;
   alt: string;
@@ -9,6 +11,13 @@ const { src, alt, location } = Astro.props;
 ---
 
 <div>
-  <img class="w-full inline-block" src={src} alt={alt} />
+  <Image
+    class="w-full inline-block"
+    src={src}
+    alt={alt}
+    width={632}
+    height={356}
+    priority
+  />
   <p class="text-xs text-mauve-400/75 text-end pt-2">{location}</p>
 </div>
