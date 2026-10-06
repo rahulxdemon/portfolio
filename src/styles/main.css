@@ -192,7 +192,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    outline-color: --alpha(var(--color-neutral-400) / 50%);
+    outline-color: --alpha(var(--color-mauve-400) / 50%);
     outline-offset: 4px;
   }
 
@@ -229,7 +229,7 @@
     cursor: pointer;
   }
   .social-link {
-    @apply underline outline-0 hover:decoration-wavy focus:decoration-wavy underline-offset-2 text-inherit visited:text-inherit decoration-neutral-400 hover:decoration-neutral-800 hover:text-neutral-800 focus:decoration-neutral-800 focus:text-neutral-800 transition-colors duration-300;
+    @apply underline outline-0 hover:decoration-wavy focus:decoration-wavy underline-offset-2 text-inherit visited:text-inherit decoration-mauve-400 hover:decoration-mauve-800 hover:text-mauve-800 focus:decoration-mauve-800 focus:text-mauve-800 transition-colors duration-300;
   }
 
   .page-init {
