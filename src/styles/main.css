@@ -252,7 +252,8 @@
   transition-timing-function: ease-out;
 }
 
-.profile-page:has(.hoverable-wrapper:hover) :is(.hover-blur p:not(.hoverable-wrapper p), .hover-blur h1, .hover-blur .hoverable-wrapper:not(:hover)) {
+.profile-page:has(.hoverable-wrapper:hover)
+  :is(.hover-blur p:not(:has(.hoverable-wrapper:hover)):not(.hoverable-wrapper p), .hover-blur h1, .hover-blur .hoverable-wrapper:not(:hover)) {
   filter: blur(2.7px);
   opacity: 0.4;
 }
