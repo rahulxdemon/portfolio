@@ -7,10 +7,10 @@ const trimmedUrl =
 ---
 
 <nav
-  class="font-baskerville bg-mauve-50 fixed bottom-0 w-full h-12 z-50 text-sm px-6 border-t border-t-mauve-100"
+  class="font-baskerville bg-mauve-50/25 fixed bottom-0 w-full h-12 z-50 text-sm px-6 border-t border-t-mauve-100 backdrop-container backdrop-blur-[2.5px]"
   transition:animate="none"
 >
-  <div class="h-full svg-frost">
+  <div class="h-full">
     <div class="flex items-stretch justify-between max-w-158 px-0.5 mx-auto h-full">
       {NAV_LINKS.filter((link) => link.isEnabled).map((link) => {
         const isActive = trimmedUrl === link.linkOptions.to;
