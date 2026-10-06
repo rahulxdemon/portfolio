@@ -246,13 +246,13 @@
   }
 }
 
-:is(.hover-blur p, .group\/w-item) {
+:is(.hover-blur p, .hover-blur h1, .hoverable-wrapper) {
   transition: filter, opacity, padding, color, background-color;
   transition-duration: 300ms;
   transition-timing-function: ease-out;
 }
 
-.work-page:has(.group\/wi-wrapper:hover) :is(.hover-blur p, .group\/w-item:not(:hover)) {
+.profile-page:has(.hoverable-wrapper:hover) :is(.hover-blur p:not(.hoverable-wrapper p), .hover-blur h1, .hover-blur .hoverable-wrapper:not(:hover)) {
   filter: blur(2.7px);
   opacity: 0.4;
 }

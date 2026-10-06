@@ -4,7 +4,7 @@ import WorkItemWrapper from "../work/work-item-wrapper.astro";
 import Heading from "./heading.astro";
 ---
 
-<div>
+<div class="hover-blur">
   <Heading heading="Work" />
   <div class="font-medium pl-4 text-sm space-y-4 leading-6.5">
     <p>
@@ -12,7 +12,7 @@ import Heading from "./heading.astro";
       things I care about from zero to one.
     </p>
 
-    <div class="group/wi-wrapper">
+    <div>
       {WORK_EXPERIENCE.map((work) => {
         return (
           <WorkItemWrapper href={work.href}>
