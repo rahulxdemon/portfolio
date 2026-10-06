@@ -1,0 +1,14 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  location: string;
+}
+
+const { src, alt, location } = Astro.props;
+---
+
+<div>
+  <img class="w-full inline-block" src={src} alt={alt} />
+  <p class="text-xs text-mauve-400/75 text-end pt-2">{location}</p>
+</div>

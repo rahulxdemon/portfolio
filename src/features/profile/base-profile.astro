@@ -4,22 +4,18 @@ import PageInfo from "@/features/shared/components/page-info.astro";
 import Social from "./social.astro";
 import About from "./about.astro";
 import Work from "./work.astro";
+import Banner from "@/features/shared/components/banner.astro";
 ---
 
 <PageContainer>
   <div class="space-y-10 selection:text-mauve-900">
     <div class="space-y-8">
       <PageInfo content="Profile" />
-      <div>
-        <img
-          class="w-full inline-block"
-          src="/assets/banner/profile.jpg"
-          alt="banner"
-        />
-        <p class="text-xs text-mauve-400/75 text-end pt-2">
-          Durgam Cheruvu, India
-        </p>
-      </div>
+      <Banner
+        src="/assets/banner/profile.jpg"
+        alt="Profile banner"
+        location="Durgam Cheruvu, India"
+      />
     </div>
     <div class="text-mauve-600 space-y-10">
       <About />
