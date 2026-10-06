@@ -9,18 +9,18 @@ interface INavLink {
 
 export const NAV_LINKS: INavLink[] = [
   {
-    id: 'about',
-    label: 'About',
+    id: 'profile',
+    label: 'Profile',
     linkOptions: {
       to: '/',
     },
     isEnabled: true,
   },
   {
-    id: 'work',
-    label: 'Work',
+    id: 'about',
+    label: 'About',
     linkOptions: {
-      to: '/work',
+      to: '/about',
     },
     isEnabled: true,
   },

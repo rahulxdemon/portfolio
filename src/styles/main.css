@@ -198,6 +198,7 @@
 
   html {
     cursor: url("/assets/cursor/c1.svg"), auto;
+    scrollbar-gutter: stable;
   }
 
   html::selection {
